@@ -1,6 +1,6 @@
 import UIKit
 
-/*var ogrenciAdi = "Ahmet"
+var ogrenciAdi = "Ahmet"
 var ogrenciYas = 18
 var ogrenciBoy = 1.78
 var ogrenciBasHarf = "A"
@@ -10,7 +10,7 @@ print(ogrenciAdi)
 print(ogrenciYas)
 print(ogrenciBoy)
 print(ogrenciBasHarf)
-print(ogrenciDevamEdiyorMu)*/
+print(ogrenciDevamEdiyorMu)
 
 
 var urun_id:Int = 3416
