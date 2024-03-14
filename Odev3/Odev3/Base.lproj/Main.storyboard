@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a7Y-gC-BTf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Odev3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-N9-mLn">
+                                <rect key="frame" x="25" y="108" width="130" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" name="yaziRenk2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee@1" translatesAutoresizingMaskIntoConstraints="NO" id="Gqq-fJ-k5m">
+                                <rect key="frame" x="25" y="164" width="364" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="Feg-k8-Yui"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee@3" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-dC-Zi0">
+                                <rect key="frame" x="25" y="454" width="150" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="jub-IJ-CL8"/>
+                                    <constraint firstAttribute="width" constant="150" id="yfy-XA-mHk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee@4" translatesAutoresizingMaskIntoConstraints="NO" id="367-IS-Kib">
+                                <rect key="frame" x="25" y="649" width="150" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="MMk-Gc-DA1"/>
+                                    <constraint firstAttribute="width" constant="150" id="hNS-Ue-auc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-Fg-27h">
+                                <rect key="frame" x="200" y="469" width="189" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cappuccino" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-fi-qdQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" name="yaziRenk2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It can also be expressed as the unique harmony of espresso and milk." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrm-Og-3ba">
+                                        <rect key="frame" x="0.0" y="36.5" width="189" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="yaziRenk2"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMJ-kr-LEZ">
+                                        <rect key="frame" x="0.0" y="107.5" width="189" height="31.5"/>
+                                        <color key="backgroundColor" name="temaRenk"/>
+                                        <color key="tintColor" name="yaziRenk1"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add to cart">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-Sb-kGX">
+                                <rect key="frame" x="200" y="668" width="189" height="139"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mocha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aw-nT-cxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" name="yaziRenk2"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is known for being a type of coffee prepared with milk and chocolate." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axt-YA-w7W">
+                                        <rect key="frame" x="0.0" y="36.5" width="189" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="yaziRenk2"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-B4-QCt">
+                                        <rect key="frame" x="0.0" y="107.5" width="189" height="31.5"/>
+                                        <color key="backgroundColor" name="temaRenk"/>
+                                        <color key="tintColor" name="yaziRenk1"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add to cart">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New in the offer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaV-Yf-QbJ">
+                                <rect key="frame" x="35" y="409" width="183.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" name="yaziRenk2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DaV-Yf-QbJ" firstAttribute="top" secondItem="Gqq-fJ-k5m" secondAttribute="bottom" constant="20" id="0YI-6v-p4j"/>
+                            <constraint firstItem="tnl-dC-Zi0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="6wA-GY-9a5"/>
+                            <constraint firstItem="5kz-Sb-kGX" firstAttribute="leading" secondItem="367-IS-Kib" secondAttribute="trailing" constant="25" id="8pc-bt-UaQ"/>
+                            <constraint firstItem="uQE-N9-mLn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="IIg-6v-hpD"/>
+                            <constraint firstItem="367-IS-Kib" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="KnY-gd-J97"/>
+                            <constraint firstItem="367-IS-Kib" firstAttribute="top" secondItem="tnl-dC-Zi0" secondAttribute="bottom" constant="20" id="MGw-AI-hhr"/>
+                            <constraint firstItem="tnl-dC-Zi0" firstAttribute="top" secondItem="DaV-Yf-QbJ" secondAttribute="bottom" constant="15" id="NuC-Pq-UD0"/>
+                            <constraint firstItem="Gqq-fJ-k5m" firstAttribute="top" secondItem="uQE-N9-mLn" secondAttribute="bottom" constant="20" id="UJD-uR-YMq"/>
+                            <constraint firstItem="DaV-Yf-QbJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Xe5-fg-YXs"/>
+                            <constraint firstAttribute="trailing" secondItem="Gqq-fJ-k5m" secondAttribute="trailing" constant="25" id="g0Z-Wn-NT2"/>
+                            <constraint firstAttribute="trailing" secondItem="5kz-Sb-kGX" secondAttribute="trailing" constant="25" id="myd-a6-ky7"/>
+                            <constraint firstItem="Q2t-Fg-27h" firstAttribute="leading" secondItem="tnl-dC-Zi0" secondAttribute="trailing" constant="25" id="qES-sE-JUz"/>
+                            <constraint firstItem="5kz-Sb-kGX" firstAttribute="top" secondItem="Q2t-Fg-27h" secondAttribute="bottom" constant="60" id="sbc-iy-PUj"/>
+                            <constraint firstAttribute="trailing" secondItem="Q2t-Fg-27h" secondAttribute="trailing" constant="25" id="vfQ-kf-k5R"/>
+                            <constraint firstItem="uQE-N9-mLn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="vxe-13-0kg"/>
+                            <constraint firstItem="Gqq-fJ-k5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="x7F-La-dyg"/>
+                            <constraint firstItem="Q2t-Fg-27h" firstAttribute="top" secondItem="DaV-Yf-QbJ" secondAttribute="bottom" constant="30" id="xfT-G7-9nh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1iI-yF-4Xl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oy9-EA-nKm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a7Y-gC-BTf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wbp-xF-1wG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Age-Ck-iFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NfH-yI-aJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coffee@1" width="626" height="417"/>
+        <image name="coffee@3" width="379" height="379"/>
+        <image name="coffee@4" width="379" height="379"/>
+        <namedColor name="temaRenk">
+            <color red="0.34901960784313724" green="0.25098039215686274" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yaziRenk1">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yaziRenk2">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
