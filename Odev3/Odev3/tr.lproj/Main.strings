@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Mocha"; ObjectID = "5aw-nT-cxh"; */
+"5aw-nT-cxh.text" = "Mocha";
+
+/* Class = "UILabel"; text = "It is known for being a type of coffee prepared with milk and chocolate."; ObjectID = "Axt-YA-w7W"; */
+"Axt-YA-w7W.text" = "Süt ve çikolata ile hazırlanan bir kahve çeşidi olması ile biliniyor.";
+
+/* Class = "UILabel"; text = "New in the offer"; ObjectID = "DaV-Yf-QbJ"; */
+"DaV-Yf-QbJ.text" = "Yeni Eklenenler";
+
+/* Class = "UILabel"; text = "Cappuccino"; ObjectID = "JS7-fi-qdQ"; */
+"JS7-fi-qdQ.text" = "Cappuccino";
+
+/* Class = "UILabel"; text = "It can also be expressed as the unique harmony of espresso and milk."; ObjectID = "Rrm-Og-3ba"; */
+"Rrm-Og-3ba.text" = "Espresso ve sütün benzersiz uyumu şeklinde de ifade edilebilir.";
+
+/* Class = "UIButton"; configuration.title = "Add to cart"; ObjectID = "Tfh-B4-QCt"; */
+"Tfh-B4-QCt.configuration.title" = "Sepete Ekle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Tfh-B4-QCt"; */
+"Tfh-B4-QCt.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add to cart"; ObjectID = "WMJ-kr-LEZ"; */
+"WMJ-kr-LEZ.configuration.title" = "Sepete Ekle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WMJ-kr-LEZ"; */
+"WMJ-kr-LEZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "uQE-N9-mLn"; */
+"uQE-N9-mLn.text" = "Hoş Geldiniz";
