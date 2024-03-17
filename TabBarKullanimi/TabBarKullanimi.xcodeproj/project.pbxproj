@@ -13,6 +13,7 @@
 		471CEFD62BA6118700347127 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471CEFD42BA6118700347127 /* Main.storyboard */; };
 		471CEFD82BA6118900347127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471CEFD72BA6118900347127 /* Assets.xcassets */; };
 		471CEFDB2BA6118900347127 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471CEFD92BA6118900347127 /* LaunchScreen.storyboard */; };
+		471CEFE32BA6127000347127 /* AyarlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471CEFE22BA6127000347127 /* AyarlarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		471CEFD72BA6118900347127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471CEFDA2BA6118900347127 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471CEFDC2BA6118A00347127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		471CEFE22BA6127000347127 /* AyarlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				471CEFCE2BA6118700347127 /* AppDelegate.swift */,
 				471CEFD02BA6118700347127 /* SceneDelegate.swift */,
 				471CEFD22BA6118700347127 /* ViewController.swift */,
+				471CEFE22BA6127000347127 /* AyarlarVC.swift */,
 				471CEFD42BA6118700347127 /* Main.storyboard */,
 				471CEFD72BA6118900347127 /* Assets.xcassets */,
 				471CEFD92BA6118900347127 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				471CEFD32BA6118700347127 /* ViewController.swift in Sources */,
 				471CEFCF2BA6118700347127 /* AppDelegate.swift in Sources */,
 				471CEFD12BA6118700347127 /* SceneDelegate.swift in Sources */,
+				471CEFE32BA6127000347127 /* AyarlarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
