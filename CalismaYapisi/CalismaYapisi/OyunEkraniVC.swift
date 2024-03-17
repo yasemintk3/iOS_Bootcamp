@@ -8,11 +8,19 @@
 import UIKit
 
 class OyunEkraniVC: UIViewController {
+    
+    var kisi:Kisiler?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let k = kisi {
+            print("------- Oyun Ekran -------")
+            print("Kişi ad    : \(k.ad!)")
+            print("Kişi yaş   : \(k.yas!)")
+            print("Kişi boy   : \(k.boy!)")
+            print("Kişi bekar : \(k.bekar!)")
+        }
     }
     
     @IBAction func buttonGeri(_ sender: Any) {
