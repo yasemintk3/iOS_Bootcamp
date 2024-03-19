@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="en9-m5-nv8">
-                                <rect key="frame" x="32" y="194" width="350" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <rect key="frame" x="32" y="194" width="350" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gfn-Yp-ZJx">
-                                <rect key="frame" x="32" y="256" width="350" height="500"/>
+                                <rect key="frame" x="32" y="274" width="350" height="500"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-nq-cEP">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="117.5"/>
@@ -36,7 +36,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonYedi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PeH-gy-46n"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEi-3v-h3z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-wC-x4P">
@@ -47,7 +47,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonSekiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61U-BP-bRQ"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFG-OX-fLE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUF-cf-a8Q">
@@ -58,7 +58,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonDokuz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCD-Ox-TUa"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sri-iB-a4e"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8n-rq-LuW">
@@ -84,7 +84,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonDort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2BT-e1-sPL"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="It0-Rc-iX9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp5-oc-sLR">
@@ -95,7 +95,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonBes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="raH-me-2SG"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1v-EX-57K"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-Tu-MoI">
@@ -106,7 +106,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonAlti:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mfb-v0-zYY"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bQo-NM-xLf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoK-Ef-Hfp">
@@ -132,7 +132,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonBir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xfn-YL-n10"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xw8-Ht-oAG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmR-0y-gsh">
@@ -143,7 +143,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonIki:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tv5-ot-mlf"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nm-us-gPQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VO-Ia-0S8">
@@ -154,7 +154,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonUc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6FG-GL-kJe"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlU-ud-5c7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-xh-ZF1">
@@ -186,7 +186,7 @@
                                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="buttonSifir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CpY-8r-AsP"/>
+                                                    <action selector="tiklananButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIq-AJ-HRZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS5-dj-jpq">

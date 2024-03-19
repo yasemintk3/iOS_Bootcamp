@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelHesap: UILabel!
     
     var hesapSonucu = 0
+    var toplamButonunaBasildiMi = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,84 +22,34 @@ class ViewController: UIViewController {
        
     }
     
-    @IBAction func buttonDokuz(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "9"
+    @IBAction func tiklananButton(_ sender: UIButton) {
+        if toplamButonunaBasildiMi { // true ise
+            
+            toplamButonunaBasildiMi = false
         }
-    }
-    
-    @IBAction func buttonSekiz(_ sender: Any) {
         
         if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "8"
-        }
-    }
-    
-    @IBAction func buttonYedi(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "7"
-        }
-    }
-    
-    @IBAction func buttonAlti(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "6"
-        }
-    }
-    
-    @IBAction func buttonBes(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "5"
-        }
-    }
-    
-    @IBAction func buttonDort(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "4"
-        }
-    }
-    
-    @IBAction func buttonUc(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "3"
-        }
-    }
-    
-    @IBAction func buttonIki(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "2"
-        }
-    }
-    
-    @IBAction func buttonBir(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "1"
-        }
-    }
-    
-    @IBAction func buttonSifir(_ sender: Any) {
-        
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "0"
+            if let tiklananSayi  = sender.titleLabel?.text {
+                labelHesap.text = varOlanDeger + tiklananSayi
+            }
         }
     }
     
     @IBAction func buttonToplama(_ sender: Any) {
         
-        if let varOlanDeger = labelHesap.text {
-            labelHesap.text = varOlanDeger + "+"
+        if !toplamButonunaBasildiMi { // false ise
+            
+            toplamButonunaBasildiMi = true
+            
+            if let varOlanDeger = labelHesap.text {
+                labelHesap.text = varOlanDeger + "+"
+            }
         }
     }
     
     @IBAction func buttonSonuc(_ sender: Any) {
+        
+        hesapSonucu = 0
         
         if let toplam = labelHesap.text {
             let toplamDizi = toplam.split(separator: "+")
@@ -114,6 +65,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTemizle(_ sender: Any) {
+        
         labelHesap.text = ""
     }
    
