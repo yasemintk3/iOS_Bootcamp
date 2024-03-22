@@ -11,7 +11,7 @@ class Anasayfa: UIViewController {
     
     @IBOutlet weak var urunlerTableView: UITableView!
     
-    var  urunlerListesi = [Urunler]()
+    var urunlerListesi = [Urunler]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,54 @@ extension Anasayfa: UITableViewDelegate, UITableViewDataSource {
         hucre.backgroundColor = UIColor(white: 0.95, alpha: 1) //alpha görünürlük değeri 0 olursa görünmez
         hucre.hucreArkaplan.layer.cornerRadius = 10.0
         
+        hucre.selectionStyle = .none // seçili olma olmayacak
+        
+        hucre.hucreProtocol = self  // self demek anasayfa yani HucreProtocol
+        hucre.indexPath = indexPath // indexPath ise zaten cellForRowAt içinde olan, UrunlerHucre'ye gönderdik
+        
         return hucre
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let urun = urunlerListesi[indexPath.row]
+        
+        let silAction = UIContextualAction(style: .destructive, title: "Sil") { contextualAction, view, bool in
+            print("\(urun.ad!) silindi")
+        }
+        
+        let duzenleAction = UIContextualAction(style: .normal, title: "Düzenle") { contextualAction, view, bool in
+            print("\(urun.ad!) düzenlendi")
+        }
+        
+        return UISwipeActionsConfiguration(actions: [silAction, duzenleAction])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let urun = urunlerListesi[indexPath.row]
+        
+        performSegue(withIdentifier: "toDetay", sender: urun)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toDetay" {
+            if let urun = sender as? Urunler {
+                let gidilecekVC = segue.destination as! DetaySayfa
+                gidilecekVC.urun = urun // ikinci urun didSelectRowAt olduğunda gelen bilgiler
+            }
+        }
+    }
+}
+
+extension Anasayfa: HucreProtocol {
+    
+    func sepeteEkleTiklandi(indexPath: IndexPath) { //UrunlerHucre'den  gelen indexPath buraya geldi
+        
+        let urun = urunlerListesi[indexPath.row] // satıdaki veriyi uren'e aktardık
+        
+        print("\(urun.ad!) sepete eklendi")
     }
 }
 
