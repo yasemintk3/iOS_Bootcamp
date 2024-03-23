@@ -14,6 +14,7 @@
 		476B27422BADFC5300E5A5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476B27412BADFC5300E5A5A2 /* Assets.xcassets */; };
 		476B27452BADFC5300E5A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476B27432BADFC5300E5A5A2 /* LaunchScreen.storyboard */; };
 		476B274D2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B274C2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift */; };
+		476B27502BAEE21700E5A5A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 476B274F2BAEE21700E5A5A2 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476B27502BAEE21700E5A5A2 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = MVVMKullanimi;
+			packageProductDependencies = (
+				476B274F2BAEE21700E5A5A2 /* RxSwift */,
+			);
 			productName = MVVMKullanimi;
 			productReference = 476B27352BADFC5000E5A5A2 /* MVVMKullanimi.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 476B272C2BADFC5000E5A5A2;
+			packageReferences = (
+				476B274E2BAEE21700E5A5A2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 476B27362BADFC5000E5A5A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		476B274E2BAEE21700E5A5A2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		476B274F2BAEE21700E5A5A2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 476B274E2BAEE21700E5A5A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 476B272D2BADFC5000E5A5A2 /* Project object */;
 }

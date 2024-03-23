@@ -18,14 +18,15 @@ class Anasayfa: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelSonuc.text = viewModel.sonuc
+        _ = viewModel.sonuc.subscribe(onNext: { s in //s ViewModel deki sonuc! alıp buraya gönderecek //dinleme
+            self.labelSonuc.text = s
+        })
     }
-    
+        
     @IBAction func buttonToplama(_ sender: Any) {
         
         if let alinanSayi1 = textFieldSayi1.text, let alinanSayi2 = textFieldSayi2.text {
             viewModel.toplamaYap(alinanSayi1: alinanSayi1, alinanSayi2: alinanSayi2) //sayıları ViewModel'e gönderdi
-            labelSonuc.text = viewModel.sonuc //gelen sonucu aktardı
         }
     }
     
@@ -33,7 +34,6 @@ class Anasayfa: UIViewController {
         
         if let alinanSayi1 = textFieldSayi1.text, let alinanSayi2 = textFieldSayi2.text {
             viewModel.carpmaYap(alinanSayi1: alinanSayi1, alinanSayi2: alinanSayi2)
-            labelSonuc.text = viewModel.sonuc
         }
     }
 }
