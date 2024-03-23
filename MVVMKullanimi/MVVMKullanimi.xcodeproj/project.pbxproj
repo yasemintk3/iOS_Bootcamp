@@ -15,6 +15,7 @@
 		476B27452BADFC5300E5A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476B27432BADFC5300E5A5A2 /* LaunchScreen.storyboard */; };
 		476B274D2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B274C2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift */; };
 		476B27502BAEE21700E5A5A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 476B274F2BAEE21700E5A5A2 /* RxSwift */; };
+		476B27522BAEE54D00E5A5A2 /* MatematikRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27512BAEE54D00E5A5A2 /* MatematikRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		476B27442BADFC5300E5A5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		476B27462BADFC5300E5A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		476B274C2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		476B27512BAEE54D00E5A5A2 /* MatematikRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatematikRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				476B273A2BADFC5000E5A5A2 /* SceneDelegate.swift */,
 				476B273C2BADFC5000E5A5A2 /* Anasayfa.swift */,
 				476B274C2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift */,
+				476B27512BAEE54D00E5A5A2 /* MatematikRepository.swift */,
 				476B273E2BADFC5000E5A5A2 /* Main.storyboard */,
 				476B27412BADFC5300E5A5A2 /* Assets.xcassets */,
 				476B27432BADFC5300E5A5A2 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				476B27392BADFC5000E5A5A2 /* AppDelegate.swift in Sources */,
 				476B274D2BAEDD2200E5A5A2 /* AnasayfaViewModel.swift in Sources */,
 				476B273B2BADFC5000E5A5A2 /* SceneDelegate.swift in Sources */,
+				476B27522BAEE54D00E5A5A2 /* MatematikRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
