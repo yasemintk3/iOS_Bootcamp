@@ -13,6 +13,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var kisilerTableView: UITableView!
     
     var kisilerListesi = [Kisiler]()
+    var viewModel = AnaSayfaViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +22,14 @@ class Anasayfa: UIViewController {
         kisilerTableView.delegate = self
         kisilerTableView.dataSource = self
         
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Ahu", kisi_tel: "555555")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "Buse", kisi_tel: "666666")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "Caner", kisi_tel: "777777")
-        
-        kisilerListesi.append(k1)
-        kisilerListesi.append(k2)
-        kisilerListesi.append(k3)
+        _ = viewModel.kisilerListesi.subscribe(onNext: { liste in // liste viewModel'den gelen kisiler listesi
+            self.kisilerListesi = liste //Anasayfa'nın kisilerListesine aktardık
+            self.kisilerTableView.reloadData()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Anasayfaya dönüldü.")
+        viewModel.kisileriYukle() //sayfaya geri dönüldüğünde güncelleme veya ekleme yapıldıysa gösterecek
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,7 +45,7 @@ class Anasayfa: UIViewController {
 extension Anasayfa : UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // yukarıda self diyerek bu özelliği, tanımladığımız searchBar'a aktardık
-        print("Kişi Ara : \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
@@ -77,7 +75,9 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
         let silAction = UIContextualAction(style: .destructive, title: "Sil") { contextualAction, view, bool in
+            
             let kisi = self.kisilerListesi[indexPath.row]
             
             let alert = UIAlertController(title: "Silme İşlemi", message: "\(kisi.kisi_ad!) silinsin mi?", preferredStyle: .alert)
@@ -87,7 +87,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "İptal", style: .destructive) { action in
-                print("Kişi Sil : \(kisi.kisi_id!)")
+                self.viewModel.sil(kisi_id: kisi.kisi_id!)
             }
             alert.addAction(evetAction)
             

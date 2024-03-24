@@ -14,6 +14,8 @@ class KisiDetay: UIViewController {
     
     var kisi:Kisiler? //burada id var aşağıda k'ye atadık
     
+    var viewModel = KisiDetayViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,11 +28,7 @@ class KisiDetay: UIViewController {
     @IBAction func buttonGuncelle(_ sender: Any) {
         
         if let ka = tfKisiAd.text , let kt = tfKisiTel.text, let k = kisi { //kisiler sınıfından oluşturduğumuz nesne ile id'ye ulaştık.
-            guncelle(kisi_id: k.kisi_id!, kisi_ad: ka, kisi_tel: kt) //sınıftaki haliyle geldi.
+            viewModel.guncelle(kisi_id: k.kisi_id!, kisi_ad: ka, kisi_tel: kt) //sınıftaki haliyle geldi.
         }
-    }
-    
-    func guncelle(kisi_id:Int, kisi_ad:String, kisi_tel:String) {
-        print("Kişi Güncelle : \(kisi_id) - \(kisi_ad) - \(kisi_tel)")
     }
 }
