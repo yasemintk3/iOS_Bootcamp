@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		476B276D2BB067DB00E5A5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B276C2BB067DB00E5A5A2 /* AppDelegate.swift */; };
 		476B276F2BB067DB00E5A5A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B276E2BB067DB00E5A5A2 /* SceneDelegate.swift */; };
-		476B27712BB067DB00E5A5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27702BB067DB00E5A5A2 /* ViewController.swift */; };
+		476B27712BB067DB00E5A5A2 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27702BB067DB00E5A5A2 /* Anasayfa.swift */; };
 		476B27742BB067DB00E5A5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476B27722BB067DB00E5A5A2 /* Main.storyboard */; };
 		476B27762BB067E400E5A5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476B27752BB067E400E5A5A2 /* Assets.xcassets */; };
 		476B27792BB067E400E5A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476B27772BB067E400E5A5A2 /* LaunchScreen.storyboard */; };
+		476B27872BB0A14A00E5A5A2 /* Tatlilar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27862BB0A14A00E5A5A2 /* Tatlilar.swift */; };
+		476B278A2BB0A7A200E5A5A2 /* TatlilarHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27892BB0A7A200E5A5A2 /* TatlilarHucre.swift */; };
+		476B278D2BB1937B00E5A5A2 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476B278C2BB1937B00E5A5A2 /* Satisfy-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		476B27692BB067DB00E5A5A2 /* Odev6ListingInterface.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odev6ListingInterface.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476B276C2BB067DB00E5A5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		476B276E2BB067DB00E5A5A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		476B27702BB067DB00E5A5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		476B27702BB067DB00E5A5A2 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
 		476B27732BB067DB00E5A5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		476B27752BB067E400E5A5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		476B27782BB067E400E5A5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		476B277A2BB067E400E5A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		476B27862BB0A14A00E5A5A2 /* Tatlilar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tatlilar.swift; sourceTree = "<group>"; };
+		476B27892BB0A7A200E5A5A2 /* TatlilarHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TatlilarHucre.swift; sourceTree = "<group>"; };
+		476B278C2BB1937B00E5A5A2 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,66 @@
 		476B276B2BB067DB00E5A5A2 /* Odev6ListingInterface */ = {
 			isa = PBXGroup;
 			children = (
+				476B278B2BB1936100E5A5A2 /* Fonts */,
+				476B27842BB0778300E5A5A2 /* ui */,
+				476B27802BB076D700E5A5A2 /* data */,
 				476B276C2BB067DB00E5A5A2 /* AppDelegate.swift */,
 				476B276E2BB067DB00E5A5A2 /* SceneDelegate.swift */,
-				476B27702BB067DB00E5A5A2 /* ViewController.swift */,
 				476B27722BB067DB00E5A5A2 /* Main.storyboard */,
 				476B27752BB067E400E5A5A2 /* Assets.xcassets */,
 				476B27772BB067E400E5A5A2 /* LaunchScreen.storyboard */,
 				476B277A2BB067E400E5A5A2 /* Info.plist */,
 			);
 			path = Odev6ListingInterface;
+			sourceTree = "<group>";
+		};
+		476B27802BB076D700E5A5A2 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				476B27812BB076DE00E5A5A2 /* entity */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		476B27812BB076DE00E5A5A2 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				476B27862BB0A14A00E5A5A2 /* Tatlilar.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		476B27842BB0778300E5A5A2 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				476B27882BB0A78400E5A5A2 /* collectionview */,
+				476B27852BB0778C00E5A5A2 /* view */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		476B27852BB0778C00E5A5A2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				476B27702BB067DB00E5A5A2 /* Anasayfa.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		476B27882BB0A78400E5A5A2 /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				476B27892BB0A7A200E5A5A2 /* TatlilarHucre.swift */,
+			);
+			path = collectionview;
+			sourceTree = "<group>";
+		};
+		476B278B2BB1936100E5A5A2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				476B278C2BB1937B00E5A5A2 /* Satisfy-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				476B27792BB067E400E5A5A2 /* LaunchScreen.storyboard in Resources */,
+				476B278D2BB1937B00E5A5A2 /* Satisfy-Regular.ttf in Resources */,
 				476B27762BB067E400E5A5A2 /* Assets.xcassets in Resources */,
 				476B27742BB067DB00E5A5A2 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				476B27712BB067DB00E5A5A2 /* ViewController.swift in Sources */,
+				476B27712BB067DB00E5A5A2 /* Anasayfa.swift in Sources */,
 				476B276D2BB067DB00E5A5A2 /* AppDelegate.swift in Sources */,
+				476B27872BB0A14A00E5A5A2 /* Tatlilar.swift in Sources */,
 				476B276F2BB067DB00E5A5A2 /* SceneDelegate.swift in Sources */,
+				476B278A2BB0A7A200E5A5A2 /* TatlilarHucre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

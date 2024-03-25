@@ -9,4 +9,8 @@ import UIKit
 
 class TatlilarHucre: UICollectionViewCell {
     
+    @IBOutlet weak var imageViewTatli: UIImageView!
+    @IBOutlet weak var labelAd: UILabel!
+    @IBOutlet weak var labelFiyat: UILabel!
+
 }
