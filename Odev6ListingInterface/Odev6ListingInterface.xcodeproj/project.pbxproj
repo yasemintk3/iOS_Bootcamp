@@ -16,6 +16,9 @@
 		476B27872BB0A14A00E5A5A2 /* Tatlilar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27862BB0A14A00E5A5A2 /* Tatlilar.swift */; };
 		476B278A2BB0A7A200E5A5A2 /* TatlilarHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27892BB0A7A200E5A5A2 /* TatlilarHucre.swift */; };
 		476B278D2BB1937B00E5A5A2 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476B278C2BB1937B00E5A5A2 /* Satisfy-Regular.ttf */; };
+		476B27902BB1ED3C00E5A5A2 /* DaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B278F2BB1ED3C00E5A5A2 /* DaoRepository.swift */; };
+		476B27932BB1ED6B00E5A5A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 476B27922BB1ED6B00E5A5A2 /* RxSwift */; };
+		476B27962BB1EE8E00E5A5A2 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27952BB1EE8E00E5A5A2 /* AnasayfaViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		476B27862BB0A14A00E5A5A2 /* Tatlilar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tatlilar.swift; sourceTree = "<group>"; };
 		476B27892BB0A7A200E5A5A2 /* TatlilarHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TatlilarHucre.swift; sourceTree = "<group>"; };
 		476B278C2BB1937B00E5A5A2 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satisfy-Regular.ttf"; sourceTree = "<group>"; };
+		476B278F2BB1ED3C00E5A5A2 /* DaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoRepository.swift; sourceTree = "<group>"; };
+		476B27952BB1EE8E00E5A5A2 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476B27932BB1ED6B00E5A5A2 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +68,9 @@
 		476B276B2BB067DB00E5A5A2 /* Odev6ListingInterface */ = {
 			isa = PBXGroup;
 			children = (
-				476B278B2BB1936100E5A5A2 /* Fonts */,
 				476B27842BB0778300E5A5A2 /* ui */,
 				476B27802BB076D700E5A5A2 /* data */,
+				476B278B2BB1936100E5A5A2 /* Fonts */,
 				476B276C2BB067DB00E5A5A2 /* AppDelegate.swift */,
 				476B276E2BB067DB00E5A5A2 /* SceneDelegate.swift */,
 				476B27722BB067DB00E5A5A2 /* Main.storyboard */,
@@ -78,6 +84,7 @@
 		476B27802BB076D700E5A5A2 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				476B278E2BB1ECEB00E5A5A2 /* repo */,
 				476B27812BB076DE00E5A5A2 /* entity */,
 			);
 			path = data;
@@ -94,8 +101,9 @@
 		476B27842BB0778300E5A5A2 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				476B27882BB0A78400E5A5A2 /* collectionview */,
 				476B27852BB0778C00E5A5A2 /* view */,
+				476B27942BB1EE7A00E5A5A2 /* viewmodel */,
+				476B27882BB0A78400E5A5A2 /* collectionview */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -124,6 +132,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		476B278E2BB1ECEB00E5A5A2 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				476B278F2BB1ED3C00E5A5A2 /* DaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		476B27942BB1EE7A00E5A5A2 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				476B27952BB1EE8E00E5A5A2 /* AnasayfaViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +164,9 @@
 			dependencies = (
 			);
 			name = Odev6ListingInterface;
+			packageProductDependencies = (
+				476B27922BB1ED6B00E5A5A2 /* RxSwift */,
+			);
 			productName = Odev6ListingInterface;
 			productReference = 476B27692BB067DB00E5A5A2 /* Odev6ListingInterface.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 476B27602BB067DB00E5A5A2;
+			packageReferences = (
+				476B27912BB1ED6B00E5A5A2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 476B276A2BB067DB00E5A5A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,8 +228,10 @@
 			files = (
 				476B27712BB067DB00E5A5A2 /* Anasayfa.swift in Sources */,
 				476B276D2BB067DB00E5A5A2 /* AppDelegate.swift in Sources */,
+				476B27962BB1EE8E00E5A5A2 /* AnasayfaViewModel.swift in Sources */,
 				476B27872BB0A14A00E5A5A2 /* Tatlilar.swift in Sources */,
 				476B276F2BB067DB00E5A5A2 /* SceneDelegate.swift in Sources */,
+				476B27902BB1ED3C00E5A5A2 /* DaoRepository.swift in Sources */,
 				476B278A2BB0A7A200E5A5A2 /* TatlilarHucre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +382,7 @@
 				DEVELOPMENT_TEAM = VM33FHMWX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Odev6ListingInterface/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sweet Craze";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -378,6 +411,7 @@
 				DEVELOPMENT_TEAM = VM33FHMWX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Odev6ListingInterface/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Sweet Craze";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -418,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		476B27912BB1ED6B00E5A5A2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		476B27922BB1ED6B00E5A5A2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 476B27912BB1ED6B00E5A5A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 476B27612BB067DB00E5A5A2 /* Project object */;
 }

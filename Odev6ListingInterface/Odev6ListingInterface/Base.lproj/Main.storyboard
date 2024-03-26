@@ -84,42 +84,37 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tatlilarHucre" id="ou8-wO-XdT" customClass="TatlilarHucre" customModule="Odev6ListingInterface" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xPc-EC-7kw">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waffle" translatesAutoresizingMaskIntoConstraints="NO" id="1gJ-M3-bE2">
-                                                    <rect key="frame" x="15" y="8" width="150" height="150"/>
+                                                    <rect key="frame" x="-39" y="8" width="150" height="150"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Koj-jw-ckT">
-                                                    <rect key="frame" x="15" y="162" width="150" height="99.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waffle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-XW-bas">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="75"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="150" id="Yrc-cS-RnG"/>
-                                                                <constraint firstAttribute="height" constant="75" id="e0a-A6-E7m"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8E-go-tZn">
-                                                            <rect key="frame" x="53.5" y="79" width="43" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8E-go-tZn">
+                                                    <rect key="frame" x="14.5" y="263.5" width="43" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waffle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwZ-XW-bas">
+                                                    <rect key="frame" x="8" y="166" width="56" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Koj-jw-ckT" firstAttribute="centerX" secondItem="xPc-EC-7kw" secondAttribute="centerX" id="6FM-IB-MdD"/>
+                                                <constraint firstItem="hwZ-XW-bas" firstAttribute="centerX" secondItem="xPc-EC-7kw" secondAttribute="centerX" id="Cz7-h9-wY0"/>
+                                                <constraint firstItem="hwZ-XW-bas" firstAttribute="top" secondItem="1gJ-M3-bE2" secondAttribute="bottom" constant="8" id="H7W-U8-R6L"/>
                                                 <constraint firstItem="1gJ-M3-bE2" firstAttribute="top" secondItem="xPc-EC-7kw" secondAttribute="top" constant="8" id="N5x-M2-t1U"/>
+                                                <constraint firstItem="h8E-go-tZn" firstAttribute="centerX" secondItem="xPc-EC-7kw" secondAttribute="centerX" id="TWV-e4-FIl"/>
+                                                <constraint firstItem="hwZ-XW-bas" firstAttribute="leading" secondItem="xPc-EC-7kw" secondAttribute="leading" constant="8" id="TbP-w0-rIo"/>
+                                                <constraint firstAttribute="trailing" secondItem="hwZ-XW-bas" secondAttribute="trailing" constant="8" id="XWJ-wr-2ai"/>
                                                 <constraint firstItem="1gJ-M3-bE2" firstAttribute="centerX" secondItem="xPc-EC-7kw" secondAttribute="centerX" id="cH2-M5-uhC"/>
-                                                <constraint firstItem="Koj-jw-ckT" firstAttribute="top" secondItem="1gJ-M3-bE2" secondAttribute="bottom" constant="4" id="woh-Js-eWf"/>
+                                                <constraint firstAttribute="bottom" secondItem="h8E-go-tZn" secondAttribute="bottom" constant="16" id="wd5-dk-wkk"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -14,9 +14,7 @@ class Tatlilar {
     var resim:String?
     var fiyat:Int?
     
-    init() {
-        
-    }
+    init() {}
     
     init(id: Int, ad: String, resim: String, fiyat: Int) {
         self.id = id

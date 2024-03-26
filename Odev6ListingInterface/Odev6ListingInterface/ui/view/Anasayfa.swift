@@ -13,11 +13,31 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var labelBaslik: UILabel!
 
     var tatlilarListesi = [Tatlilar]()
+    var viewModel = AnasayfaViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelBaslik.font = UIFont(name: "Satisfy-Regular", size: 27)
+        view.backgroundColor = UIColor.systemGray6
+        
+        labelBaslik.font = UIFont(name: "Satisfy-Regular", size: 25)
+        
+        tatliCollectionView.delegate = self
+        tatliCollectionView.dataSource = self
+        
+        _ = viewModel.tatlilarListesi.subscribe(onNext: { liste in
+            self.tatlilarListesi = liste
+            self.tatliCollectionView.reloadData()
+        })
+        
+        barButtonIcon()
+        collectionViewTasarim()
+        appearance()
+    }
+    
+// MARK: Funcs
+    
+    func barButtonIcon() {
         
         if let image = UIImage(named: "user"){
             let originalImage = image.withRenderingMode(.alwaysOriginal)
@@ -30,29 +50,12 @@ class Anasayfa: UIViewController {
     
             navigationItem.rightBarButtonItem = barButtonItem
         }
-        
-        view.backgroundColor = UIColor.systemGray6
-        
-        tatliCollectionView.delegate = self
-        tatliCollectionView.dataSource = self
-        
-        tatliCollectionView.backgroundColor  = UIColor.systemGray6
-        
-        let t1 = Tatlilar(id: 1, ad: "Waffle", resim: "waffle", fiyat: 180)
-        let t2 = Tatlilar(id: 2, ad: "Çilek ve Çikolata Aşkı", resim: "cilekvecikolata", fiyat: 380)
-        let t3 = Tatlilar(id: 3, ad: "Elmalı Turta Dilimi", resim: "elmali", fiyat: 400)
-        let t4 = Tatlilar(id: 4, ad: "Dondurma", resim: "dondurma", fiyat: 375)
-        let t5 = Tatlilar(id: 5, ad: "Çikolatalı Pasta Dilimi", resim: "cikolataliKek", fiyat: 145)
-        let t6 = Tatlilar(id: 6, ad: "Limon ve Lavanta Dansı", resim: "limonlu", fiyat: 550)
-        tatlilarListesi.append(t1)
-        tatlilarListesi.append(t2)
-        tatlilarListesi.append(t3)
-        tatlilarListesi.append(t4)
-        tatlilarListesi.append(t5)
-        tatlilarListesi.append(t6)
+    }
+    
+    func collectionViewTasarim() {
         
         let tasarim = UICollectionViewFlowLayout()
-        tasarim.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        tasarim.sectionInset = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
         tasarim.minimumInteritemSpacing = 8
         tasarim.minimumLineSpacing = 8
 
@@ -62,20 +65,22 @@ class Anasayfa: UIViewController {
         tasarim.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 1.4)
 
         tatliCollectionView.collectionViewLayout = tasarim
+        tatliCollectionView.backgroundColor  = UIColor.systemGray6
+    }
+    
+    func appearance() {
         
-
         let appearance = UITabBarAppearance()
                 
-        renkDegistir(itemAppearance: appearance.stackedLayoutAppearance)
-        renkDegistir(itemAppearance: appearance.inlineLayoutAppearance)
-        renkDegistir(itemAppearance: appearance.compactInlineLayoutAppearance)
+        itemOzellestir(itemAppearance: appearance.stackedLayoutAppearance)
+        itemOzellestir(itemAppearance: appearance.inlineLayoutAppearance)
+        itemOzellestir(itemAppearance: appearance.compactInlineLayoutAppearance)
                 
         tabBarController?.tabBar.standardAppearance = appearance
         tabBarController?.tabBar.scrollEdgeAppearance = appearance
-        
     }
     
-    func renkDegistir(itemAppearance:UITabBarItemAppearance) {
+    func itemOzellestir(itemAppearance:UITabBarItemAppearance) {
         //seçili durum
            
         itemAppearance.selected.iconColor = UIColor.systemRed
@@ -85,9 +90,10 @@ class Anasayfa: UIViewController {
            
         itemAppearance.normal.iconColor = UIColor.black
         itemAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.black]
-           
     }
 }
+
+// MARK: Extensions
 
 extension Anasayfa: UICollectionViewDelegate, UICollectionViewDataSource {
     
