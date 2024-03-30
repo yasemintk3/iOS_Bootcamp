@@ -12,6 +12,15 @@ class KisilerDaoRepository {
     
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
     
+    let db:FMDatabase?
+    
+    init() {
+        let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! //kopyalanacak yeri seçtim
+        let veritabaniURL = URL(fileURLWithPath: hedefYol).appendingPathComponent("rehber.sqlite") //  veritabanı dosyası oluşturdum
+        
+        db = FMDatabase(path: veritabaniURL.path) // bu oluşturduğumuz db nesnesi ile telefonda oluşturduğumuz veeribanına eriştik ve artık üzerinde işlem yapabiliriz. Veritabanı verileri db nesnesine aktarılıyor.
+    }
+    
     func kaydet(kisi_ad:String, kisi_tel:String) { //KisiKayitViewModel'den aldı
         print("Kişi Kaydet : \(kisi_ad) - \(kisi_tel)") //çıktı verdi.
     }
@@ -30,17 +39,24 @@ class KisilerDaoRepository {
     }
     
     func kisileriYukle() {
-        
+    
+        db?.open()
+            
         var liste = [Kisiler]()
-        
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Ahu", kisi_tel: "555555")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "Buse", kisi_tel: "666666")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "Caner", kisi_tel: "777777")
-        
-        liste.append(k1)
-        liste.append(k2)
-        liste.append(k3)
-        
-        kisilerListesi.onNext(liste) //fun çalıştığında tetikleyecek ve bir önceki katmana yani viewModel'a gönderecek
+            
+        do {
+            let result = try db!.executeQuery("SELECT * FROM kisiler", values: nil)  // tüm  verileri çektik
+                
+            while result.next() { // while döngüsü kaç satır varsa o kadar kisi nesnesi verecek
+            let kisi = Kisiler(kisi_id: Int(result.string(forColumn: "kisi_id"))!,
+                               kisi_ad: result.string(forColumn: "kisi_ad")!,
+                               kisi_tel: result.string(forColumn: "kisi_tel")!)
+                liste.append(kisi)
+            }
+            kisilerListesi.onNext(liste) //fun çalıştığında tetikleyecek ve bir önceki katmana yani viewModel'a gönderecek
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
 }

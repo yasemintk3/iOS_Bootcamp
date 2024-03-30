@@ -25,9 +25,9 @@
 		476B27D02BB712CE00E5A5A2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 476B27C82BB712CD00E5A5A2 /* FMDatabase.m */; };
 		476B27D12BB712CE00E5A5A2 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 476B27C92BB712CD00E5A5A2 /* FMDatabaseAdditions.m */; };
 		476B27D22BB712CE00E5A5A2 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 476B27CC2BB712CE00E5A5A2 /* FMResultSet.m */; };
-		476B27D42BB7134000E5A5A2 /* rehber.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 476B27D32BB7134000E5A5A2 /* rehber.sqlite */; };
 		4798FAC22BAB27F800DA6603 /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798FAC12BAB27F800DA6603 /* Kisiler.swift */; };
 		4798FAC52BAB526400DA6603 /* KisilerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798FAC42BAB526400DA6603 /* KisilerHucre.swift */; };
+		47F799142BB89F22001818E7 /* rehber.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 47F799132BB89F21001818E7 /* rehber.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,9 +58,9 @@
 		476B27CB2BB712CE00E5A5A2 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		476B27CC2BB712CE00E5A5A2 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		476B27CD2BB712CE00E5A5A2 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		476B27D32BB7134000E5A5A2 /* rehber.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = rehber.sqlite; path = ../../rehber.sqlite; sourceTree = "<group>"; };
 		4798FAC12BAB27F800DA6603 /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
 		4798FAC42BAB526400DA6603 /* KisilerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerHucre.swift; sourceTree = "<group>"; };
+		47F799132BB89F21001818E7 /* rehber.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = rehber.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 				476B27C52BB712CD00E5A5A2 /* FMResultSet.h */,
 				476B27CC2BB712CE00E5A5A2 /* FMResultSet.m */,
 				476B27C22BB712CB00E5A5A2 /* KisilerUygulamasi-Bridging-Header.h */,
-				476B27D32BB7134000E5A5A2 /* rehber.sqlite */,
+				47F799132BB89F21001818E7 /* rehber.sqlite */,
 			);
 			path = KisilerUygulamasi;
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				470A94A52BAB24D000B2739E /* LaunchScreen.storyboard in Resources */,
-				476B27D42BB7134000E5A5A2 /* rehber.sqlite in Resources */,
+				47F799142BB89F22001818E7 /* rehber.sqlite in Resources */,
 				470A94A22BAB24D000B2739E /* Assets.xcassets in Resources */,
 				470A94A02BAB24C300B2739E /* Main.storyboard in Resources */,
 			);
