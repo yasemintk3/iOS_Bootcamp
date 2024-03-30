@@ -22,26 +22,65 @@ class KisilerDaoRepository {
     }
     
     func kaydet(kisi_ad:String, kisi_tel:String) { //KisiKayitViewModel'den aldı
-        print("Kişi Kaydet : \(kisi_ad) - \(kisi_tel)") //çıktı verdi.
+        
+        db?.open()
+        do {
+            try db!.executeUpdate("INSERT INTO kisiler (kisi_ad, kisi_tel) VALUES (?,?)", values: [kisi_ad,kisi_tel]) // veri ekliyoruz, dışarıdan gelen [kisi_ad,kisi_tel] ? olan yerlere yerleşiyor ve veritabanına ekleme yapıldı
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
     func guncelle(kisi_id:Int, kisi_ad:String, kisi_tel:String) {
-        print("Kişi Güncelle : \(kisi_id) - \(kisi_ad) - \(kisi_tel)")
+        
+        db?.open()
+        do {
+            try db!.executeUpdate("UPDATE kisiler SET kisi_ad = ?, kisi_tel = ? WHERE kisi_id = ?", values: [kisi_ad,kisi_tel,kisi_id]) // güncelleme yapıyoruz, dışarıdan gelen [kisi_ad,kisi_tel] ? olan yerlere yerleşiyor ve id ye göre güncelliyor
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
     func sil(kisi_id:Int) {
-        print("Kişi Sil : \(kisi_id)")
-        kisileriYukle() //sil'den sonra tekrar sayfa yüklenmeli
+        
+        db?.open()
+        do {
+            try db!.executeUpdate("DELETE FROM kisiler WHERE kisi_id = ?", values: [kisi_id]) // siliyoruz, dışarıdan gelen [kisi_id] ? olan yere yerleşiyor ve id ye göre siliyor
+            kisileriYukle() //sil'den sonra tekrar sayfa yüklenmeli, eğer yazılmazsa veritabanından silinir ama arayüzde kalır
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
     func ara(aramaKelimesi:String) {
-        print("Kişi Ara : \(aramaKelimesi)")
+        
+        db?.open()
+
+        var liste = [Kisiler]()
+            
+        do {
+            let result = try db!.executeQuery("SELECT * FROM kisiler WHERE kisi_ad like '%\(aramaKelimesi)%'", values: nil)
+                
+            while result.next() { // while döngüsü kaç satır varsa o kadar kisi nesnesi verecek
+            let kisi = Kisiler(kisi_id: Int(result.string(forColumn: "kisi_id"))!,
+                               kisi_ad: result.string(forColumn: "kisi_ad")!,
+                               kisi_tel: result.string(forColumn: "kisi_tel")!)
+                liste.append(kisi)
+            }
+            kisilerListesi.onNext(liste) //fun çalıştığında tetikleyecek ve bir önceki katmana yani viewModel'a gönderecek
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
     func kisileriYukle() {
     
         db?.open()
-            
+
         var liste = [Kisiler]()
             
         do {

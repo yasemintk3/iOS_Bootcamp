@@ -86,14 +86,13 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
     
             alert.addAction(iptalAction)
             
-            let evetAction = UIAlertAction(title: "İptal", style: .destructive) { action in
+            let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
                 self.viewModel.sil(kisi_id: kisi.kisi_id!)
             }
             alert.addAction(evetAction)
             
             self.present(alert, animated: true)
         }
-        
         return UISwipeActionsConfiguration(actions: [silAction])
     }
 }
