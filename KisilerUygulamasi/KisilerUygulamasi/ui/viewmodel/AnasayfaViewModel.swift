@@ -14,9 +14,9 @@ class AnaSayfaViewModel {
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
     
     init() {
+        veritabaniKopyala() // anasayfa çalıştığı an veritabanı kopyalanıcak
         kisilerListesi = krepo.kisilerListesi //repodaki listesi buradaki listeye aktardık
         kisileriYukle()  //uygulama ilk  çalıştığı  anda repoda bulunan verileri getirecek
-        veritabaniKopyala() // anasayfa çalıştığı an veritabanı kopyalanıcak
     }
     
     func sil(kisi_id:Int) {

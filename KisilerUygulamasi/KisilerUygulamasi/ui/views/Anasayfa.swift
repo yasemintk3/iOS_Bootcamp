@@ -13,7 +13,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var kisilerTableView: UITableView!
     
     var kisilerListesi = [Kisiler]()
-    var viewModel = AnaSayfaViewModel()
+    var viewModel = AnaSayfaViewModel() // AnasayfaViewModel init tetiklenir
     
     override func viewDidLoad() {
         super.viewDidLoad()

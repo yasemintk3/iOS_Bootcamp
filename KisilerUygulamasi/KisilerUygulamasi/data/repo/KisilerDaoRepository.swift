@@ -12,7 +12,7 @@ class KisilerDaoRepository {
     
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
     
-    let db:FMDatabase?
+    let db:FMDatabase? // veritabanına erişim nesnesi
     
     init() {
         let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! //kopyalanacak yeri seçtim
@@ -45,7 +45,7 @@ class KisilerDaoRepository {
         var liste = [Kisiler]()
             
         do {
-            let result = try db!.executeQuery("SELECT * FROM kisiler", values: nil)  // tüm  verileri çektik
+            let result = try db!.executeQuery("SELECT * FROM kisiler", values: nil) // tüm  verileri çektik
                 
             while result.next() { // while döngüsü kaç satır varsa o kadar kisi nesnesi verecek
             let kisi = Kisiler(kisi_id: Int(result.string(forColumn: "kisi_id"))!,
