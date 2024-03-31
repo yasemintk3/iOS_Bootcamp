@@ -64,5 +64,27 @@ extension Anasayfa: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let silmeIslemi = UIContextualAction(style: .destructive, title: "Sil") { contextualAction, view, bool in
+            
+            let not = self.notListesi[indexPath.row]
+            
+            let alert = UIAlertController(title: "Silme İşlemi", message: "Not silinsin mi?", preferredStyle: .alert)
+            
+            let iptalAction = UIAlertAction(title: "Vazgeç", style: .cancel)
+            
+            alert.addAction(iptalAction)
+            
+            let silAction = UIAlertAction(title: "Sil", style: .destructive) { action in
+                self.viewModel.sil(not_id: not.not_id!)
+            }
+            alert.addAction(silAction)
+            
+            self.present(alert, animated: true)
+        }
+        return UISwipeActionsConfiguration(actions: [silmeIslemi])
+    }
 }
 

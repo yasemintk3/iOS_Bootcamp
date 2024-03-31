@@ -44,6 +44,18 @@ class NotDaoRepository {
         db?.close()
     }
     
+    func sil(not_id:Int) {
+        
+        db?.open()
+        do {
+            try db!.executeUpdate("DELETE FROM toDos WHERE not_id = ?", values: [not_id])
+            notlariYukle()
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
     func notlariYukle() {
         
         db?.open()

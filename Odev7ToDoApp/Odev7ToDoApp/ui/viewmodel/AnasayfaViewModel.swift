@@ -19,10 +19,6 @@ class AnasayfaViewModel {
         notlariYukle()
     }
     
-    func notlariYukle() {
-        notRepo.notlariYukle()
-    }
-    
     func veritabaniKopyala() {
         let bundleYolu = Bundle.main.path(forResource: "toDoList", ofType: ".sqlite")
         let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -36,5 +32,13 @@ class AnasayfaViewModel {
                 try fileManager.copyItem(atPath: bundleYolu!, toPath: kopyalanacakYer.path)
             } catch {}
         }
+    }
+    
+    func notlariYukle() {
+        notRepo.notlariYukle()
+    }
+    
+    func sil(not_id:Int) {
+        notRepo.sil(not_id: not_id)
     }
 }
