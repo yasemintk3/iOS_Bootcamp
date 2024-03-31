@@ -41,4 +41,8 @@ class AnasayfaViewModel {
     func sil(not_id:Int) {
         notRepo.sil(not_id: not_id)
     }
+    
+    func ara(aramaKelimesi:String) {
+        notRepo.ara(aramaKelimesi: aramaKelimesi)
+    }
 }

@@ -56,6 +56,26 @@ class NotDaoRepository {
         db?.close()
     }
     
+    func ara(aramaKelimesi:String) {
+        db?.open()
+        
+        var liste = [ToDoList]()
+        
+        do {
+            let result = try db!.executeQuery("SELECT * FROM toDos WHERE not_name like '%\(aramaKelimesi)%'", values: nil)
+            
+            while result.next(){
+                let not = ToDoList(not_id: Int(result.string(forColumn: "not_id"))!,
+                                   not_name: result.string(forColumn: "not_name")!)
+                liste.append(not)
+            }
+            notListesi.onNext(liste)
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
     func notlariYukle() {
         
         db?.open()

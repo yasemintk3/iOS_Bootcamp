@@ -18,6 +18,7 @@ class Anasayfa: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         toDoTableView.delegate = self
         toDoTableView.dataSource = self
         
@@ -29,6 +30,13 @@ class Anasayfa: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.notlariYukle()
+    }
+}
+
+extension Anasayfa: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
