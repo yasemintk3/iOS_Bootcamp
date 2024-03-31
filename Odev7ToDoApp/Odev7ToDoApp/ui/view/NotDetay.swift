@@ -23,5 +23,8 @@ class NotDetay: UIViewController {
     }
     
     @IBAction func guncelleButton(_ sender: Any) {
+        if let notAdi = tfNotName.text, let not = not {
+            viewModel.guncelle(not_id: not.not_id!, not_name: notAdi)
+        }
     }
 }

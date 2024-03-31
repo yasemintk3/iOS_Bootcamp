@@ -33,6 +33,17 @@ class NotDaoRepository {
         db?.close()
     }
     
+    func guncelle(not_id:Int, not_name:String) {
+        
+        db?.open()
+        do {
+            try db!.executeUpdate("UPDATE toDos SET not_name = ? WHERE not_id = ?", values: [not_name, not_id])
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
     func notlariYukle() {
         
         db?.open()
