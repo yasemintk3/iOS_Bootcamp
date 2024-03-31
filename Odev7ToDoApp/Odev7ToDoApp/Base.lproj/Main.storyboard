@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PsC-g0-iZB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="Odev7ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7FM-Tr-8SA">
+                                <rect key="frame" x="16" y="148" width="382" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tU8-nx-dab">
+                                <rect key="frame" x="0.0" y="207" width="414" height="655"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notHucre" id="UVV-DU-l6a" customClass="NotHucre" customModule="Odev7ToDoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UVV-DU-l6a" id="WBo-V4-Goy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödevlerini Yap" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-Z3-Gsd">
+                                                    <rect key="frame" x="24" y="15" width="366" height="24"/>
+                                                    <color key="tintColor" name="yaziRenk1"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" name="yaziRenk1"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LRW-Z3-Gsd" firstAttribute="leading" secondItem="WBo-V4-Goy" secondAttribute="leadingMargin" constant="4" id="3Sl-85-YCG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LRW-Z3-Gsd" secondAttribute="trailing" constant="4" id="T6s-kN-hSM"/>
+                                                <constraint firstItem="LRW-Z3-Gsd" firstAttribute="top" secondItem="WBo-V4-Goy" secondAttribute="topMargin" constant="4" id="n5b-Ch-fH3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="notName" destination="LRW-Z3-Gsd" id="Jn5-d2-LH1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tU8-nx-dab" secondAttribute="trailing" id="9vf-UF-XnL"/>
+                            <constraint firstItem="tU8-nx-dab" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EsI-HI-0sj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tU8-nx-dab" secondAttribute="bottom" id="PNs-jy-09g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FM-Tr-8SA" secondAttribute="trailing" constant="16" id="U4h-rQ-lxS"/>
+                            <constraint firstItem="7FM-Tr-8SA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XWt-Rt-lTi"/>
+                            <constraint firstItem="7FM-Tr-8SA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="k6z-mI-kHW"/>
+                            <constraint firstItem="tU8-nx-dab" firstAttribute="top" secondItem="7FM-Tr-8SA" secondAttribute="bottom" constant="8" id="kmN-oT-j99"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="To Do List" id="CEn-hB-LcH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CXg-FY-0vY">
+                            <color key="tintColor" name="button"/>
+                            <connections>
+                                <segue destination="B7y-Un-Ini" kind="show" id="H5o-DI-fqI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="7FM-Tr-8SA" id="AIY-hI-9LJ"/>
+                        <outlet property="toDoTableView" destination="tU8-nx-dab" id="MiK-hB-spi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.40579710144937" y="58.928571428571423"/>
+        </scene>
+        <!--Not Kayit-->
+        <scene sceneID="yfs-26-ikw">
+            <objects>
+                <viewController id="B7y-Un-Ini" customClass="NotKayit" customModule="Odev7ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KS3-bT-fVy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blO-Va-bfa">
+                                <rect key="frame" x="32" y="172" width="350" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="yaziRenk1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="xCu-ef-Y6C"/>
+                                </constraints>
+                                <color key="textColor" name="yaziRenk1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGP-Be-nFn">
+                                <rect key="frame" x="155" y="352" width="97" height="38"/>
+                                <color key="backgroundColor" name="button"/>
+                                <color key="tintColor" name="yaziRenk2"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KAYDET">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="kaydetButton:" destination="B7y-Un-Ini" eventType="touchUpInside" id="vbz-wO-5zY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zO6-fI-Ew1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="blO-Va-bfa" firstAttribute="leading" secondItem="zO6-fI-Ew1" secondAttribute="leading" constant="32" id="Ri2-Oc-zi7"/>
+                            <constraint firstItem="LGP-Be-nFn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zO6-fI-Ew1" secondAttribute="leading" id="SWc-IT-vcm"/>
+                            <constraint firstItem="LGP-Be-nFn" firstAttribute="top" secondItem="blO-Va-bfa" secondAttribute="bottom" constant="80" id="icP-tQ-pmg"/>
+                            <constraint firstItem="blO-Va-bfa" firstAttribute="top" secondItem="zO6-fI-Ew1" secondAttribute="top" constant="32" id="j8D-25-0qI"/>
+                            <constraint firstItem="zO6-fI-Ew1" firstAttribute="trailing" secondItem="LGP-Be-nFn" secondAttribute="trailing" constant="162" id="rgD-sh-gPK"/>
+                            <constraint firstItem="zO6-fI-Ew1" firstAttribute="trailing" secondItem="blO-Va-bfa" secondAttribute="trailing" constant="32" id="wli-mM-5s4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X4L-ig-09O"/>
+                    <connections>
+                        <outlet property="tfNotName" destination="blO-Va-bfa" id="Bmj-lg-OKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUB-BD-LBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="-250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="teV-WD-qrq">
+            <objects>
+                <viewController id="Xqb-iO-pAc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WlP-wo-XS8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rk-5A-3Nf">
+                                <rect key="frame" x="32" y="76" width="350" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="yaziRenk1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="SRv-8h-zVc"/>
+                                </constraints>
+                                <color key="textColor" name="yaziRenk1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-yX-V5K">
+                                <rect key="frame" x="145" y="256" width="124.5" height="38"/>
+                                <color key="backgroundColor" name="button"/>
+                                <color key="tintColor" name="yaziRenk2"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kns-It-Gpf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b2m-yX-V5K" firstAttribute="centerX" secondItem="WlP-wo-XS8" secondAttribute="centerX" id="1cO-le-v8k"/>
+                            <constraint firstItem="kns-It-Gpf" firstAttribute="trailing" secondItem="5rk-5A-3Nf" secondAttribute="trailing" constant="32" id="VMN-b4-6HN"/>
+                            <constraint firstItem="b2m-yX-V5K" firstAttribute="top" secondItem="5rk-5A-3Nf" secondAttribute="bottom" constant="80" id="YfB-kV-hQR"/>
+                            <constraint firstItem="5rk-5A-3Nf" firstAttribute="top" secondItem="kns-It-Gpf" secondAttribute="top" constant="32" id="b0F-Z1-aF5"/>
+                            <constraint firstItem="5rk-5A-3Nf" firstAttribute="leading" secondItem="kns-It-Gpf" secondAttribute="leading" constant="32" id="o7b-w7-JkA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="366-0y-0Yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="453"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Jz-0W-8YP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PsC-g0-iZB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Kwg-rH-yHc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="button"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="title"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fdJ-df-wsP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dy7-yA-id9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-220.28985507246378" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="button">
+            <color red="0.94900000095367432" green="0.68199998140335083" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title">
+            <color red="0.85100001096725464" green="0.45100000500679016" blue="0.59600001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yaziRenk1">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yaziRenk2">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
