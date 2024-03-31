@@ -22,6 +22,17 @@ class NotDaoRepository {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
+    func kaydet(not_name:String) {
+        
+        db?.open()
+        do {
+            try db!.executeUpdate("INSERT INTO toDos (not_name) VALUES (?)", values: [not_name])
+        } catch {
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
     func notlariYukle() {
         
         db?.open()
@@ -40,7 +51,6 @@ class NotDaoRepository {
         } catch {
             print(error.localizedDescription)
         }
-        
         db?.close()
     }
 }

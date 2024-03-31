@@ -76,6 +76,7 @@
                     <connections>
                         <outlet property="searchBar" destination="7FM-Tr-8SA" id="AIY-hI-9LJ"/>
                         <outlet property="toDoTableView" destination="tU8-nx-dab" id="MiK-hB-spi"/>
+                        <segue destination="Xqb-iO-pAc" kind="show" identifier="toDetay" id="gk6-yC-QGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,7 +91,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blO-Va-bfa">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blO-Va-bfa">
                                 <rect key="frame" x="32" y="172" width="350" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="yaziRenk1"/>
@@ -137,27 +138,27 @@
             </objects>
             <point key="canvasLocation" x="1455" y="-250"/>
         </scene>
-        <!--View Controller-->
+        <!--Not Detay-->
         <scene sceneID="teV-WD-qrq">
             <objects>
-                <viewController id="Xqb-iO-pAc" sceneMemberID="viewController">
+                <viewController id="Xqb-iO-pAc" customClass="NotDetay" customModule="Odev7ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WlP-wo-XS8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rk-5A-3Nf">
-                                <rect key="frame" x="32" y="76" width="350" height="100"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Syv-NE-NnL">
+                                <rect key="frame" x="32" y="172" width="350" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="yaziRenk1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="SRv-8h-zVc"/>
+                                    <constraint firstAttribute="height" constant="100" id="8MK-Zq-m2Y"/>
                                 </constraints>
                                 <color key="textColor" name="yaziRenk1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-yX-V5K">
-                                <rect key="frame" x="145" y="256" width="124.5" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-uW-3L0">
+                                <rect key="frame" x="144.5" y="352" width="125" height="38"/>
                                 <color key="backgroundColor" name="button"/>
                                 <color key="tintColor" name="yaziRenk2"/>
                                 <state key="normal" title="Button"/>
@@ -167,22 +168,30 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="guncelleButton:" destination="Xqb-iO-pAc" eventType="touchUpInside" id="7gN-85-rQ9"/>
+                                    <action selector="kaydetButton:" destination="B7y-Un-Ini" eventType="touchUpInside" id="36w-gL-SmX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kns-It-Gpf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b2m-yX-V5K" firstAttribute="centerX" secondItem="WlP-wo-XS8" secondAttribute="centerX" id="1cO-le-v8k"/>
-                            <constraint firstItem="kns-It-Gpf" firstAttribute="trailing" secondItem="5rk-5A-3Nf" secondAttribute="trailing" constant="32" id="VMN-b4-6HN"/>
-                            <constraint firstItem="b2m-yX-V5K" firstAttribute="top" secondItem="5rk-5A-3Nf" secondAttribute="bottom" constant="80" id="YfB-kV-hQR"/>
-                            <constraint firstItem="5rk-5A-3Nf" firstAttribute="top" secondItem="kns-It-Gpf" secondAttribute="top" constant="32" id="b0F-Z1-aF5"/>
-                            <constraint firstItem="5rk-5A-3Nf" firstAttribute="leading" secondItem="kns-It-Gpf" secondAttribute="leading" constant="32" id="o7b-w7-JkA"/>
+                            <constraint firstItem="rhs-uW-3L0" firstAttribute="centerX" secondItem="WlP-wo-XS8" secondAttribute="centerX" id="5T9-lH-ZyU"/>
+                            <constraint firstItem="Syv-NE-NnL" firstAttribute="leading" secondItem="WlP-wo-XS8" secondAttribute="leading" constant="32" id="AC2-et-N6Z"/>
+                            <constraint firstItem="Syv-NE-NnL" firstAttribute="top" secondItem="kns-It-Gpf" secondAttribute="top" constant="32" id="Lg3-Fv-Kwk"/>
+                            <constraint firstItem="rhs-uW-3L0" firstAttribute="top" secondItem="Syv-NE-NnL" secondAttribute="bottom" constant="80" id="oa4-SW-XAY"/>
+                            <constraint firstItem="kns-It-Gpf" firstAttribute="trailing" secondItem="Syv-NE-NnL" secondAttribute="trailing" constant="32" id="uds-Li-0gh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HOX-sC-pDV"/>
+                    <connections>
+                        <outlet property="tfNotName" destination="Syv-NE-NnL" id="gwY-JA-uYz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="366-0y-0Yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="453"/>
+            <point key="canvasLocation" x="1454" y="456"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Jz-0W-8YP">

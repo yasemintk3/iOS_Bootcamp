@@ -26,6 +26,8 @@
 		4705504F2BB9DEE400E08C4C /* NotDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4705504E2BB9DEE400E08C4C /* NotDaoRepository.swift */; };
 		470550512BB9DF7B00E08C4C /* NotHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470550502BB9DF7B00E08C4C /* NotHucre.swift */; };
 		470550532BB9E27500E08C4C /* toDoList.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 470550522BB9E27500E08C4C /* toDoList.sqlite */; };
+		47A5DFD72BB9EC1C00A66887 /* NotDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DFD62BB9EC1C00A66887 /* NotDetayViewModel.swift */; };
+		47A5DFD92BB9EC3300A66887 /* NotDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DFD82BB9EC3300A66887 /* NotDetay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		4705504E2BB9DEE400E08C4C /* NotDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDaoRepository.swift; sourceTree = "<group>"; };
 		470550502BB9DF7B00E08C4C /* NotHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotHucre.swift; sourceTree = "<group>"; };
 		470550522BB9E27500E08C4C /* toDoList.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = toDoList.sqlite; sourceTree = "<group>"; };
+		47A5DFD62BB9EC1C00A66887 /* NotDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDetayViewModel.swift; sourceTree = "<group>"; };
+		47A5DFD82BB9EC3300A66887 /* NotDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDetay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +110,8 @@
 				4705503F2BB9DB0700E08C4C /* FMDatabasePool.h */,
 				470550352BB9DB0600E08C4C /* FMDatabasePool.m */,
 				4705503D2BB9DB0700E08C4C /* FMDatabaseQueue.h */,
-				470550362BB9DB0600E08C4C /* FMDatabaseQueue.m */,
 				470550372BB9DB0600E08C4C /* FMDB.h */,
+				470550362BB9DB0600E08C4C /* FMDatabaseQueue.m */,
 				4705503C2BB9DB0700E08C4C /* FMResultSet.h */,
 				4705503E2BB9DB0700E08C4C /* FMResultSet.m */,
 				470550342BB9DB0600E08C4C /* Odev7ToDoApp-Bridging-Header.h */,
@@ -139,6 +143,7 @@
 			children = (
 				470550302BB9D86A00E08C4C /* AnasayfaViewModel.swift */,
 				470550322BB9D87B00E08C4C /* NotKayitViewModel.swift */,
+				47A5DFD62BB9EC1C00A66887 /* NotDetayViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				470550132BB9C96C00E08C4C /* Anasayfa.swift */,
 				4705502C2BB9D07700E08C4C /* NotKayit.swift */,
+				47A5DFD82BB9EC3300A66887 /* NotDetay.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4705502D2BB9D07700E08C4C /* NotKayit.swift in Sources */,
+				47A5DFD92BB9EC3300A66887 /* NotDetay.swift in Sources */,
 				470550332BB9D87B00E08C4C /* NotKayitViewModel.swift in Sources */,
+				47A5DFD72BB9EC1C00A66887 /* NotDetayViewModel.swift in Sources */,
 				470550142BB9C96C00E08C4C /* Anasayfa.swift in Sources */,
 				470550422BB9DB0700E08C4C /* FMDatabase.m in Sources */,
 				470550312BB9D86A00E08C4C /* AnasayfaViewModel.swift in Sources */,

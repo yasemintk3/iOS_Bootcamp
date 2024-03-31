@@ -47,5 +47,22 @@ extension Anasayfa: UITableViewDelegate, UITableViewDataSource {
         
         return hucre
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let not = notListesi[indexPath.row]
+        
+        performSegue(withIdentifier: "toDetay", sender: not)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay" {
+            if let not = sender as? ToDoList {
+                let detayVC = segue.destination as! NotDetay
+                detayVC.not = not
+            }
+        }
+    }
 }
 

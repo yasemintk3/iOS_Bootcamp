@@ -9,4 +9,9 @@ import Foundation
 
 class NotKayitViewModel {
     
+    var notRepo = NotDaoRepository()
+    
+    func kaydet(not_name:String) {
+        notRepo.kaydet(not_name: not_name)
+    }
 }

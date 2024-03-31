@@ -11,12 +11,17 @@ class NotKayit: UIViewController {
 
     @IBOutlet weak var tfNotName: UITextField!
     
+    var viewModel = NotKayitViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      
     }
     
     @IBAction func kaydetButton(_ sender: Any) {
+        if let notAdi = tfNotName.text {
+            viewModel.kaydet(not_name: notAdi)
+        }
+        tfNotName.text = ""
     }
 }
