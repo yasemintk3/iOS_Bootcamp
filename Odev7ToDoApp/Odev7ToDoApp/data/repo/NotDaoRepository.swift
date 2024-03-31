@@ -22,6 +22,8 @@ class NotDaoRepository {
         db = FMDatabase(path: veritabaniURL.path)
     }
     
+// MARK: Funcs
+    
     func kaydet(not_name:String) {
         
         db?.open()

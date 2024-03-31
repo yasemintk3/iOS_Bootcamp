@@ -16,6 +16,11 @@ class NotDetay: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let color = UIColor(named: "button")
+        
+        tfNotName.layer.borderColor = color?.cgColor
+        tfNotName.layer.borderWidth = 1.0
 
         if let n = not {
             tfNotName.text = n.not_name

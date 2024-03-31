@@ -19,6 +19,8 @@ class AnasayfaViewModel {
         notlariYukle()
     }
     
+// MARK: Funcs
+    
     func veritabaniKopyala() {
         let bundleYolu = Bundle.main.path(forResource: "toDoList", ofType: ".sqlite")
         let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!

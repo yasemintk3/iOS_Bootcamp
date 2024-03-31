@@ -93,7 +93,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blO-Va-bfa">
                                 <rect key="frame" x="32" y="172" width="350" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="yaziRenk2"/>
                                 <color key="tintColor" name="yaziRenk1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="xCu-ef-Y6C"/>
@@ -148,7 +148,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Syv-NE-NnL">
                                 <rect key="frame" x="32" y="172" width="350" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="yaziRenk2"/>
                                 <color key="tintColor" name="yaziRenk1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="8MK-Zq-m2Y"/>

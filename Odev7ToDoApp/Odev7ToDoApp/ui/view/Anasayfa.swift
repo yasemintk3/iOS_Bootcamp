@@ -33,6 +33,8 @@ class Anasayfa: UIViewController {
     }
 }
 
+// MARK: Extensions
+
 extension Anasayfa: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

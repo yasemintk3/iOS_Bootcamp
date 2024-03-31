@@ -15,7 +15,11 @@ class NotKayit: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let color = UIColor(named: "button")
+        
+        tfNotName.layer.borderColor = color?.cgColor
+        tfNotName.layer.borderWidth = 1.0
     }
     
     @IBAction func kaydetButton(_ sender: Any) {
