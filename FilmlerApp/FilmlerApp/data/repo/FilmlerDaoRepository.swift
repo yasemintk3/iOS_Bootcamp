@@ -7,40 +7,26 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 
 class FilmlerDaoRepository {
     
     var filmlerListesi = BehaviorSubject<[Filmler]>(value: [Filmler]())
-    
-    let db:FMDatabase?
-    
-    init() {
-        let hedefYol = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let veritabaniURL = URL(fileURLWithPath: hedefYol).appendingPathComponent("filmler_app.sqlite")
-        
-        db = FMDatabase(path: veritabaniURL.path)
-    }
-    
+
     func filmleriYukle() {
         
-        db?.open()
-        
-        var liste = [Filmler]()
-        
-        do {
-            let result = try db!.executeQuery("SELECT * FROM filmler", values: nil)
+        AF.request("http://kasimadalan.pe.hu/filmler_yeni/tum_filmler.php", method: .get).response { response in
             
-            while result.next() {
-                let film = Filmler(id: Int(result.string(forColumn: "id"))!,
-                                   ad: result.string(forColumn: "ad")!,
-                                   resim: result.string(forColumn: "resim")!,
-                                   fiyat: Int(result.string(forColumn: "fiyat"))!)
-                liste.append(film)
+            if let data = response.data {
+                do {
+                    let cevap = try JSONDecoder().decode(FilmlerCevap.self, from: data)
+                    if let liste = cevap.filmler {
+                        self.filmlerListesi.onNext(liste)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
-            filmlerListesi.onNext(liste)
-        } catch {
-            print(error.localizedDescription)
         }
-        db?.close()
     }
 }
