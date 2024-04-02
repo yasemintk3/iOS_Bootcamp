@@ -12,7 +12,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var kisilerTableView: UITableView!
     
-    var kisilerListesi = [Kisiler]()
+    var kisilerListesi = [KisilerModel]()
     var viewModel = AnaSayfaViewModel() // AnasayfaViewModel init tetiklenir
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class Anasayfa: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {
-            if let kisi = sender as? Kisiler {
+            if let kisi = sender as? KisilerModel {
                 let gidilecekVC = segue.destination as! KisiDetay
                 gidilecekVC.kisi = kisi // ilk kisi detay sayfasındaki oluşturulmuş olan ikincisi ise yukarıda
             }
@@ -87,7 +87,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                self.viewModel.sil(kisi_id: kisi.kisi_id!)
+                self.viewModel.sil(kisi: kisi)
             }
             alert.addAction(evetAction)
             

@@ -1,5 +1,14 @@
 //
-//  Use this file to import your target's public headers that you would like to expose to Swift.
+//  KisilerUygulamasi-Bridging-Header.h
+//  KisilerUygulamasi
+//
+//  Created by Yasemin TOK on 2.04.2024.
 //
 
-#import "FMDB.h"
+#ifndef KisilerUygulamasi_Bridging_Header_h
+#define KisilerUygulamasi_Bridging_Header_h
+
+
+#endif /* KisilerUygulamasi_Bridging_Header_h */
+
+//Dummy-Bridging-Header.h
