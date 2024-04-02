@@ -7,12 +7,12 @@
 
 import UIKit
 
-class Anasayfa: UIViewController {
+class Anasayfa : UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var kisilerTableView: UITableView!
     
-    var kisilerListesi = [KisilerModel]()
+    var kisilerListesi = [Kisiler]()
     var viewModel = AnaSayfaViewModel() // AnasayfaViewModel init tetiklenir
     
     override func viewDidLoad() {
@@ -38,12 +38,7 @@ class Anasayfa: UIViewController {
 extension Anasayfa : UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // yukarıda self diyerek bu özelliği, tanımladığımız searchBar'a aktardık
-        
-        if searchText == "" { //coredata'da searchBar arama yaptıktan sonra boş olursa veriler kendiliğindne yüklenmiyor o yüzden biizm yazmamız lazım
-            viewModel.kisileriYukle()
-        } else {
             viewModel.ara(aramaKelimesi: searchText)
-        }
     }
 }
 
@@ -74,7 +69,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetay" {
-            if let kisi = sender as? KisilerModel {
+            if let kisi = sender as? Kisiler {
                 let gidilecekVC = segue.destination as! KisiDetay
                 gidilecekVC.kisi = kisi // ilk kisi detay sayfasındaki oluşturulmuş olan ikincisi ise yukarıda
             }
@@ -94,7 +89,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                self.viewModel.sil(kisi: kisi)
+                self.viewModel.sil(kisi_id: Int(kisi.kisi_id!)!)
             }
             alert.addAction(evetAction)
             

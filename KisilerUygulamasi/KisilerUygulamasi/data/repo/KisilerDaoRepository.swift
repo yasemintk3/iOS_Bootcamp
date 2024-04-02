@@ -11,56 +11,37 @@ import CoreData
 
 class KisilerDaoRepository {
     
-    var kisilerListesi = BehaviorSubject<[KisilerModel]>(value: [KisilerModel]())
-    
-    let context = appDelegate.persistentContainer.viewContext // veritabanına erişim yetkisi
-    
+    var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
+
     func kaydet(kisi_ad:String, kisi_tel:String) { //KisiKayitViewModel'den aldı
-        
-        let kisi = KisilerModel(context: context) //veritabanından nesne oluşturdum
-        kisi.kisi_ad = kisi_ad
-        kisi.kisi_tel = kisi_tel
-        
-        appDelegate.saveContext() //oluşturduğum nesneleri kaydet
+        print("Kişi Kaydet : \(kisi_ad) - \(kisi_tel)") //çıktı verdi.
     }
-    
-    func guncelle(kisi:KisilerModel, kisi_ad:String, kisi_tel:String) {
-        
-        kisi.kisi_ad = kisi_ad
-        kisi.kisi_tel = kisi_tel
-        
-        appDelegate.saveContext()
+
+    func guncelle(kisi_id:Int, kisi_ad:String, kisi_tel:String) {
+        print("Kişi Güncelle : \(kisi_id) - \(kisi_ad) - \(kisi_tel)")
     }
-    
-    func sil(kisi:KisilerModel) {
-        
-        context.delete(kisi)
-        appDelegate.saveContext()
-        kisileriYukle()
+
+    func sil(kisi_id:Int) {
+        print("Kişi Sil : \(kisi_id)")
+        kisileriYukle() //sil'den sonra tekrar sayfa yüklenmeli
     }
-    
+
     func ara(aramaKelimesi:String) {
-        
-        do {
-            let fr = KisilerModel.fetchRequest()
-            fr.predicate = NSPredicate(format: "kisi_ad CONTAINS[c] %@", aramaKelimesi)
-            
-            let liste = try context.fetch(fr)
-            kisilerListesi.onNext(liste)
-            
-        } catch {
-            print(error.localizedDescription)
-        }
+        print("Kişi Ara : \(aramaKelimesi)")
     }
-    
+
     func kisileriYukle() {
-    
-        do {
-            let liste = try context.fetch(KisilerModel.fetchRequest()) //fetchRequest tablodaki tüm verileri nesne olarak veriyor
-            kisilerListesi.onNext(liste)
-            
-        } catch {
-            print(error.localizedDescription)
-        }
+
+        var liste = [Kisiler]()
+
+        let k1 = Kisiler(kisi_id: "1", kisi_ad: "Ahu", kisi_tel: "555555")
+        let k2 = Kisiler(kisi_id: "2", kisi_ad: "Buse", kisi_tel: "666666")
+        let k3 = Kisiler(kisi_id: "3", kisi_ad: "Caner", kisi_tel: "777777")
+
+        liste.append(k1)
+        liste.append(k2)
+        liste.append(k3)
+
+        kisilerListesi.onNext(liste) //fun çalıştığında tetikleyecek ve bir önceki katmana yani viewModel'a gönderecek
     }
 }

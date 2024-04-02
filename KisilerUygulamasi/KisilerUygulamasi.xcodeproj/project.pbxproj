@@ -15,14 +15,15 @@
 		470A94A52BAB24D000B2739E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 470A94A32BAB24D000B2739E /* LaunchScreen.storyboard */; };
 		470A94B12BAB25D200B2739E /* KisiKayit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A94B02BAB25D200B2739E /* KisiKayit.swift */; };
 		470A94B32BAB25E600B2739E /* KisiDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A94B22BAB25E600B2739E /* KisiDetay.swift */; };
-		4713F4832BBC4EB400AE1648 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4713F4812BBC4EB400AE1648 /* Model.xcdatamodeld */; };
-		471457282BBC557400959509 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 471457272BBC557400959509 /* RxSwift */; };
+		475687AE2BBC802C0026630E /* CRUDCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475687AD2BBC802C0026630E /* CRUDCevap.swift */; };
+		475687B02BBC80F80026630E /* KisilerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475687AF2BBC80F80026630E /* KisilerCevap.swift */; };
 		476B27582BAF1E4E00E5A5A2 /* KisilerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B27572BAF1E4E00E5A5A2 /* KisilerDaoRepository.swift */; };
 		476B275B2BAF1E9700E5A5A2 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B275A2BAF1E9700E5A5A2 /* AnasayfaViewModel.swift */; };
 		476B275D2BAF1EC700E5A5A2 /* KisiKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B275C2BAF1EC700E5A5A2 /* KisiKayitViewModel.swift */; };
 		476B275F2BAF1EE400E5A5A2 /* KisiDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B275E2BAF1EE400E5A5A2 /* KisiDetayViewModel.swift */; };
 		4798FAC22BAB27F800DA6603 /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798FAC12BAB27F800DA6603 /* Kisiler.swift */; };
 		4798FAC52BAB526400DA6603 /* KisilerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798FAC42BAB526400DA6603 /* KisilerHucre.swift */; };
+		ED1CBD1052BEEDC864B0F083 /* Pods_KisilerUygulamasi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4145716B458D473020F48E /* Pods_KisilerUygulamasi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,14 +37,18 @@
 		470A94A62BAB24D000B2739E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		470A94B02BAB25D200B2739E /* KisiKayit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayit.swift; sourceTree = "<group>"; };
 		470A94B22BAB25E600B2739E /* KisiDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetay.swift; sourceTree = "<group>"; };
-		4713F4822BBC4EB400AE1648 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4714572A2BBC583800959509 /* KisilerUygulamasi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KisilerUygulamasi-Bridging-Header.h"; sourceTree = "<group>"; };
+		475687AD2BBC802C0026630E /* CRUDCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDCevap.swift; sourceTree = "<group>"; };
+		475687AF2BBC80F80026630E /* KisilerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerCevap.swift; sourceTree = "<group>"; };
 		476B27572BAF1E4E00E5A5A2 /* KisilerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDaoRepository.swift; sourceTree = "<group>"; };
 		476B275A2BAF1E9700E5A5A2 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
 		476B275C2BAF1EC700E5A5A2 /* KisiKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayitViewModel.swift; sourceTree = "<group>"; };
 		476B275E2BAF1EE400E5A5A2 /* KisiDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetayViewModel.swift; sourceTree = "<group>"; };
 		4798FAC12BAB27F800DA6603 /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
 		4798FAC42BAB526400DA6603 /* KisilerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerHucre.swift; sourceTree = "<group>"; };
+		60D14561E0BE29E6D0A8326F /* Pods-KisilerUygulamasi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KisilerUygulamasi.release.xcconfig"; path = "Target Support Files/Pods-KisilerUygulamasi/Pods-KisilerUygulamasi.release.xcconfig"; sourceTree = "<group>"; };
+		C71CEEDE4E58B8372FD5CB3D /* Pods-KisilerUygulamasi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KisilerUygulamasi.debug.xcconfig"; path = "Target Support Files/Pods-KisilerUygulamasi/Pods-KisilerUygulamasi.debug.xcconfig"; sourceTree = "<group>"; };
+		FE4145716B458D473020F48E /* Pods_KisilerUygulamasi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KisilerUygulamasi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,18 +56,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471457282BBC557400959509 /* RxSwift in Frameworks */,
+				ED1CBD1052BEEDC864B0F083 /* Pods_KisilerUygulamasi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04954928FA25A799A4CFA853 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C71CEEDE4E58B8372FD5CB3D /* Pods-KisilerUygulamasi.debug.xcconfig */,
+				60D14561E0BE29E6D0A8326F /* Pods-KisilerUygulamasi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		470A948C2BAB24C300B2739E = {
 			isa = PBXGroup;
 			children = (
 				470A94972BAB24C300B2739E /* KisilerUygulamasi */,
 				470A94962BAB24C300B2739E /* Products */,
+				04954928FA25A799A4CFA853 /* Pods */,
+				FB92F102024EFAA6A02B3467 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +102,6 @@
 				470A94A32BAB24D000B2739E /* LaunchScreen.storyboard */,
 				470A94A62BAB24D000B2739E /* Info.plist */,
 				4714572A2BBC583800959509 /* KisilerUygulamasi-Bridging-Header.h */,
-				4713F4812BBC4EB400AE1648 /* Model.xcdatamodeld */,
 			);
 			path = KisilerUygulamasi;
 			sourceTree = "<group>";
@@ -114,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				4798FAC12BAB27F800DA6603 /* Kisiler.swift */,
+				475687AD2BBC802C0026630E /* CRUDCevap.swift */,
+				475687AF2BBC80F80026630E /* KisilerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -154,6 +171,14 @@
 			path = tableview;
 			sourceTree = "<group>";
 		};
+		FB92F102024EFAA6A02B3467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE4145716B458D473020F48E /* Pods_KisilerUygulamasi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 470A94A92BAB24D000B2739E /* Build configuration list for PBXNativeTarget "KisilerUygulamasi" */;
 			buildPhases = (
+				1FB1CBD95E4B260D10878145 /* [CP] Check Pods Manifest.lock */,
 				470A94912BAB24C300B2739E /* Sources */,
 				470A94922BAB24C300B2739E /* Frameworks */,
 				470A94932BAB24C300B2739E /* Resources */,
+				84B96BAE4BD888E04233220E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,7 +198,6 @@
 			);
 			name = KisilerUygulamasi;
 			packageProductDependencies = (
-				471457272BBC557400959509 /* RxSwift */,
 			);
 			productName = KisilerUygulamasi;
 			productReference = 470A94952BAB24C300B2739E /* KisilerUygulamasi.app */;
@@ -203,7 +229,6 @@
 			);
 			mainGroup = 470A948C2BAB24C300B2739E;
 			packageReferences = (
-				471457262BBC557400959509 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 470A94962BAB24C300B2739E /* Products */;
 			projectDirPath = "";
@@ -227,6 +252,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FB1CBD95E4B260D10878145 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KisilerUygulamasi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84B96BAE4BD888E04233220E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KisilerUygulamasi/Pods-KisilerUygulamasi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KisilerUygulamasi/Pods-KisilerUygulamasi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KisilerUygulamasi/Pods-KisilerUygulamasi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		470A94912BAB24C300B2739E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -239,11 +306,12 @@
 				476B27582BAF1E4E00E5A5A2 /* KisilerDaoRepository.swift in Sources */,
 				476B275B2BAF1E9700E5A5A2 /* AnasayfaViewModel.swift in Sources */,
 				476B275F2BAF1EE400E5A5A2 /* KisiDetayViewModel.swift in Sources */,
+				475687AE2BBC802C0026630E /* CRUDCevap.swift in Sources */,
 				470A94992BAB24C300B2739E /* AppDelegate.swift in Sources */,
+				475687B02BBC80F80026630E /* KisilerCevap.swift in Sources */,
 				470A949B2BAB24C300B2739E /* SceneDelegate.swift in Sources */,
 				4798FAC22BAB27F800DA6603 /* Kisiler.swift in Sources */,
 				476B275D2BAF1EC700E5A5A2 /* KisiKayitViewModel.swift in Sources */,
-				4713F4832BBC4EB400AE1648 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +455,7 @@
 		};
 		470A94AA2BAB24D000B2739E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71CEEDE4E58B8372FD5CB3D /* Pods-KisilerUygulamasi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -418,6 +487,7 @@
 		};
 		470A94AB2BAB24D000B2739E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60D14561E0BE29E6D0A8326F /* Pods-KisilerUygulamasi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,38 +538,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		471457262BBC557400959509 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/reactiveX/RxSwift";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		471457272BBC557400959509 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 471457262BBC557400959509 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		4713F4812BBC4EB400AE1648 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4713F4822BBC4EB400AE1648 /* Model.xcdatamodel */,
-			);
-			currentVersion = 4713F4822BBC4EB400AE1648 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 470A948D2BAB24C300B2739E /* Project object */;
 }
