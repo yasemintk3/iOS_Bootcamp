@@ -24,7 +24,9 @@ class Anasayfa : UIViewController {
         
         _ = viewModel.kisilerListesi.subscribe(onNext: { liste in // liste viewModel'den gelen kisiler listesi
             self.kisilerListesi = liste //Anasayfa'nın kisilerListesine aktardık
-            self.kisilerTableView.reloadData()
+            DispatchQueue.main.async { //kod çalışabilir ama hata olabilir o yüzden hata olmayacağından emin olduk
+                self.kisilerTableView.reloadData()
+            }
         })
     }
     
@@ -45,10 +47,12 @@ extension Anasayfa : UISearchBarDelegate {
 extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return kisilerListesi.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let kisi = kisilerListesi[indexPath.row] // her bir hücre için
         
         let hucre = tableView.dequeueReusableCell(withIdentifier: "kisilerHucre") as! KisilerHucre
