@@ -31,21 +31,19 @@ class Anasayfa: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         viewModel.kisileriYukle() //sayfaya geri dönüldüğünde güncelleme veya ekleme yapıldıysa gösterecek
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetay" {
-            if let kisi = sender as? KisilerModel {
-                let gidilecekVC = segue.destination as! KisiDetay
-                gidilecekVC.kisi = kisi // ilk kisi detay sayfasındaki oluşturulmuş olan ikincisi ise yukarıda
-            }
-        }
-    }
 }
+
+// MARK: Extensions
 
 extension Anasayfa : UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) { // yukarıda self diyerek bu özelliği, tanımladığımız searchBar'a aktardık
-        viewModel.ara(aramaKelimesi: searchText)
+        
+        if searchText == "" { //coredata'da searchBar arama yaptıktan sonra boş olursa veriler kendiliğindne yüklenmiyor o yüzden biizm yazmamız lazım
+            viewModel.kisileriYukle()
+        } else {
+            viewModel.ara(aramaKelimesi: searchText)
+        }
     }
 }
 
@@ -74,6 +72,15 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true) // detay sayfasından geri gelince hücre seçili olmuyor
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay" {
+            if let kisi = sender as? KisilerModel {
+                let gidilecekVC = segue.destination as! KisiDetay
+                gidilecekVC.kisi = kisi // ilk kisi detay sayfasındaki oluşturulmuş olan ikincisi ise yukarıda
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let silAction = UIContextualAction(style: .destructive, title: "Sil") { contextualAction, view, bool in
@@ -96,4 +103,3 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [silAction])
     }
 }
-

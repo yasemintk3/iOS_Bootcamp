@@ -26,21 +26,36 @@ class KisilerDaoRepository {
     
     func guncelle(kisi:KisilerModel, kisi_ad:String, kisi_tel:String) {
         
-
+        kisi.kisi_ad = kisi_ad
+        kisi.kisi_tel = kisi_tel
+        
+        appDelegate.saveContext()
     }
     
     func sil(kisi:KisilerModel) {
+        
+        context.delete(kisi)
+        appDelegate.saveContext()
         kisileriYukle()
     }
     
     func ara(aramaKelimesi:String) {
-        print("Kişi Ara : \(aramaKelimesi)")
+        
+        do {
+            let fr = KisilerModel.fetchRequest()
+            fr.predicate = NSPredicate(format: "kisi_ad CONTAINS[c] %@", aramaKelimesi)
+            
+            let liste = try context.fetch(fr)
+            kisilerListesi.onNext(liste)
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func kisileriYukle() {
     
         do {
-            
             let liste = try context.fetch(KisilerModel.fetchRequest()) //fetchRequest tablodaki tüm verileri nesne olarak veriyor
             kisilerListesi.onNext(liste)
             
