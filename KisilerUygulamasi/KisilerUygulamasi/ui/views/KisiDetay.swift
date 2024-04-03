@@ -28,7 +28,7 @@ class KisiDetay: UIViewController {
     @IBAction func buttonGuncelle(_ sender: Any) {
         
         if let ka = tfKisiAd.text , let kt = tfKisiTel.text, let k = kisi { //kisiler sınıfından oluşturduğumuz nesne ile id'ye ulaştık.
-            viewModel.guncelle(kisi_id: Int(k.kisi_id!)!, kisi_ad: ka, kisi_tel: kt) //sınıftaki haliyle geldi.
+            viewModel.guncelle(kisi_id: k.kisi_id!, kisi_ad: ka, kisi_tel: kt) //sınıftaki haliyle geldi.
         }
     }
 }

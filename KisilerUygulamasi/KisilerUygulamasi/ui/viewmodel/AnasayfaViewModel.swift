@@ -18,7 +18,7 @@ class AnaSayfaViewModel {
         kisileriYukle()  //uygulama ilk  çalıştığı  anda repoda bulunan verileri getirecek
     }
     
-    func sil(kisi_id:Int) {
+    func sil(kisi_id:String) {
         krepo.sil(kisi_id: kisi_id)
     }
     

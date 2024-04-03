@@ -9,7 +9,7 @@ import Foundation
 
 //her bir kullanıcı için bu sayfa kullanılacak
 
-class Kisiler : Codable {
+class Kisiler {
     var kisi_id:String?
     var kisi_ad:String?
     var kisi_tel:String?

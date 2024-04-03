@@ -7,101 +7,76 @@
 
 import Foundation
 import RxSwift
-import Alamofire
+import FirebaseFirestore
 
 class KisilerDaoRepository {
     
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
+    var collectionKisiler = Firestore.firestore().collection("Kisiler") //veritabanında Kisiler adlı bir tablo oluşturduk
 
     func kaydet(kisi_ad:String, kisi_tel:String) { //KisiKayitViewModel'den aldı
         
-        let params:Parameters = ["kisi_ad":kisi_ad, "kisi_tel":kisi_tel] //"" içerisindekiler veritabanındaki ile aynı olmalı
+        let yeniKisi:[String:Any] = ["kisi_id":"", "kisi_ad":kisi_ad, "kisi_tel":kisi_tel] //ilk kayıtta id kendisi oluşturuyor
         
-        AF.request("http://kasimadalan.pe.hu/kisiler/insert_kisiler.php", method: .post, parameters: params).response { response in //bilgi istediği için method post oldu ve parametreleri ekledik
-            if let data = response.data { //response.data KisilerCevap'tan gelen
-                do {
-                    let cevap = try JSONDecoder().decode(CRUDCevap.self, from: data) //adresteki veriyi alıp KisilerCevap sınıfına dönüştürüdük
-    
-                    print(cevap.success!)
-                    print(cevap.message!)
-                    
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
+        collectionKisiler.document().setData(yeniKisi)
     }
 
-    func guncelle(kisi_id:Int, kisi_ad:String, kisi_tel:String) {
+    func guncelle(kisi_id:String, kisi_ad:String, kisi_tel:String) {
         
-        let params:Parameters = ["kisi_id":kisi_id, "kisi_ad":kisi_ad, "kisi_tel":kisi_tel] //"" içerisindekiler veritabanındaki ile aynı olmalı
+        let guncellenenKisi:[String:Any] = ["kisi_ad":kisi_ad, "kisi_tel":kisi_tel]
         
-        AF.request("http://kasimadalan.pe.hu/kisiler/update_kisiler.php", method: .post, parameters: params).response { response in
-            if let data = response.data {
-                do {
-                    let cevap = try JSONDecoder().decode(CRUDCevap.self, from: data) //adresteki veriyi alıp KisilerCevap sınıfına dönüştürüdük
-    
-                    print(cevap.success!)
-                    print(cevap.message!)
-                    
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
+        collectionKisiler.document(kisi_id).updateData(guncellenenKisi) //kisileriYukle kısmında kisi_id'ye aktarım yaptığımız için burada kullanabiliyoruz.
     }
 
-    func sil(kisi_id:Int) {
-        
-        let params:Parameters = ["kisi_id":kisi_id] //"" içerisindekiler veritabanındaki ile aynı olmalı
-        
-        AF.request("http://kasimadalan.pe.hu/kisiler/delete_kisiler.php", method: .post, parameters: params).response { response in
-            if let data = response.data {
-                do {
-                    let cevap = try JSONDecoder().decode(CRUDCevap.self, from: data) //adresteki veriyi alıp KisilerCevap sınıfına dönüştürüdük
-    
-                    print(cevap.success!)
-                    print(cevap.message!)
-                    self.kisileriYukle() //arayüzdende silsin diye
-                    
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
+    func sil(kisi_id:String) {
+        collectionKisiler.document(kisi_id).delete()
     }
 
     func ara(aramaKelimesi:String) {
         
-        let params:Parameters = ["kisi_ad":aramaKelimesi]
         
-        AF.request("http://kasimadalan.pe.hu/kisiler/tum_kisiler_arama.php", method: .post, parameters: params).response { response in //herhangi bir bilgi istemediği için method get oldu.
-            if let data = response.data { //response.data KisilerCevap'tan gelen
-                do {
-                    let cevap = try JSONDecoder().decode(KisilerCevap.self, from: data) //adresteki veriyi alıp KisilerCevap sınıfına dönüştürüdük
-                    if let liste = cevap.kisiler {
-                        self.kisilerListesi.onNext(liste)
+        collectionKisiler.addSnapshotListener { snapshot, error in
+            
+            var liste = [Kisiler]()
+            
+            if let documents = snapshot?.documents { // var olan tüm documentlara yani tüm verilere eriştik
+                for document in documents {
+                    let data = document.data() // tek bir satırdaki verilere erişmek için, data = kisi_ad, kisi_id, kisi_tel bilgilerini içerir
+                    let kisi_id = document.documentID // document ise firebasedeki documentID içeriyor, başta kisi_id biz oluşturamadığımız için okuma yaparken sistemin oluşturduğu id değerini kisi_id ye aktarıyoruz.
+                    let kisi_ad = data["kisi_ad"] as? String ?? ""
+                    let kisi_tel = data["kisi_tel"] as? String ?? ""
+                    
+                    if kisi_ad.lowercased().contains(aramaKelimesi.lowercased()) { // kisi_ad 'da yazılan harf veya hece var mı?
+                        
+                        let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad, kisi_tel: kisi_tel)
+                        
+                        liste.append(kisi)
                     }
-                } catch {
-                    print(error.localizedDescription)
                 }
             }
+            self.kisilerListesi.onNext(liste)
         }
     }
 
     func kisileriYukle() {
         
-        AF.request("http://kasimadalan.pe.hu/kisiler/tum_kisiler.php", method: .get).response { response in //herhangi bir bilgi istemediği için method get oldu.
-            if let data = response.data { //response.data KisilerCevap'tan gelen
-                do {
-                    let cevap = try JSONDecoder().decode(KisilerCevap.self, from: data) //adresteki veriyi alıp KisilerCevap sınıfına dönüştürüdük
-                    if let liste = cevap.kisiler {
-                        self.kisilerListesi.onNext(liste)
-                    }
-                } catch {
-                    print(error.localizedDescription)
+        collectionKisiler.addSnapshotListener { snapshot, error in
+            
+            var liste = [Kisiler]()
+            
+            if let documents = snapshot?.documents { // var olan tüm documentlara yani tüm verilere eriştik
+                for document in documents {
+                    let data = document.data() // tek bir satırdaki verilere erişmek için, data = kisi_ad, kisi_id, kisi_tel bilgilerini içerir
+                    let kisi_id = document.documentID // document ise firebasedeki documentID içeriyor, başta kisi_id biz oluşturamadığımız için okuma yaparken sistemin oluşturduğu id değerini kisi_id ye aktarıyoruz.
+                    let kisi_ad = data["kisi_ad"] as? String ?? ""
+                    let kisi_tel = data["kisi_tel"] as? String ?? ""
+                    
+                    let kisi = Kisiler(kisi_id: kisi_id, kisi_ad: kisi_ad, kisi_tel: kisi_tel)
+                    
+                    liste.append(kisi)
                 }
             }
+            self.kisilerListesi.onNext(liste)
         }
     }
 }
