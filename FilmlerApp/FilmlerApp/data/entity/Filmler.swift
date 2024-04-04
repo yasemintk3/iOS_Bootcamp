@@ -9,7 +9,7 @@ import Foundation
 
 class Filmler: Codable {
   
-    var id:Int?
+    var id:String?
     var ad:String?
     var resim:String?
     var fiyat:Int?
@@ -18,7 +18,7 @@ class Filmler: Codable {
         
     }
     
-    init(id: Int, ad: String, resim: String, fiyat: Int) {
+    init(id: String, ad: String, resim: String, fiyat: Int) {
         self.id = id
         self.ad = ad
         self.resim = resim

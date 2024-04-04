@@ -5,10 +5,24 @@ target 'FilmlerApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Alamofire', '~> 5.4.4'
   pod 'RxSwift', '~> 6.2.0'
   pod 'RxCocoa', '~> 6.2.0'
   pod 'Kingfisher'
+
+  # Firebase Core
+  pod 'Firebase/Core'
+
+  # Firebase Authentication
+  pod 'Firebase/Auth'
+
+  # Firebase Realtime Database
+  pod 'Firebase/Database'
+
+  # Firebase Cloud Firestore
+  pod 'Firebase/Firestore'
+
+  # Firebase Storage
+  pod 'Firebase/Storage'
 
   # Pods for FilmlerApp
 

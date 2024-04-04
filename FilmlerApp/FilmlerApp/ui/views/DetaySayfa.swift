@@ -20,7 +20,7 @@ class DetaySayfa: UIViewController {
         super.viewDidLoad()
 
         if let f = film {
-            
+
             labelFilm.text = f.ad
             
             if let url = URL(string: "http://kasimadalan.pe.hu/filmler_yeni/resimler/\(f.resim!)") {

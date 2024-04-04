@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1ED76C3EF1AE213F413FD0F3 /* Pods_FilmlerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB45A5A96FF69ECCF50B926E /* Pods_FilmlerApp.framework */; };
-		471D35812BBCC5ED00705971 /* FilmlerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D35802BBCC5ED00705971 /* FilmlerCevap.swift */; };
 		476B26EE2BAD8B8900E5A5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B26ED2BAD8B8900E5A5A2 /* AppDelegate.swift */; };
 		476B26F02BAD8B8900E5A5A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B26EF2BAD8B8900E5A5A2 /* SceneDelegate.swift */; };
 		476B26F22BAD8B8900E5A5A2 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B26F12BAD8B8900E5A5A2 /* Anasayfa.swift */; };
@@ -20,12 +19,12 @@
 		476B270B2BAD8ED400E5A5A2 /* FilmlerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B270A2BAD8ED400E5A5A2 /* FilmlerHucre.swift */; };
 		476B279C2BB48E3D00E5A5A2 /* FilmlerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B279B2BB48E3D00E5A5A2 /* FilmlerDaoRepository.swift */; };
 		476B279F2BB48E7000E5A5A2 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B279E2BB48E7000E5A5A2 /* AnasayfaViewModel.swift */; };
+		47BDE32E2BBE007800FCBF25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47BDE32D2BBE007800FCBF25 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A64BA825AFCC126EDDE1528 /* Pods-FilmlerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmlerApp.debug.xcconfig"; path = "Target Support Files/Pods-FilmlerApp/Pods-FilmlerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		471D357F2BBCC4A800705971 /* FilmlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		471D35802BBCC5ED00705971 /* FilmlerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmlerCevap.swift; sourceTree = "<group>"; };
 		476B26ED2BAD8B8900E5A5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		476B26EF2BAD8B8900E5A5A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		476B26F12BAD8B8900E5A5A2 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		476B270A2BAD8ED400E5A5A2 /* FilmlerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmlerHucre.swift; sourceTree = "<group>"; };
 		476B279B2BB48E3D00E5A5A2 /* FilmlerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmlerDaoRepository.swift; sourceTree = "<group>"; };
 		476B279E2BB48E7000E5A5A2 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		47BDE32D2BBE007800FCBF25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47C8236B2BBC414800D8E0EB /* FilmlerApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FilmlerApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		845960FC49FE95A4BA94E59A /* Pods-FilmlerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmlerApp.release.xcconfig"; path = "Target Support Files/Pods-FilmlerApp/Pods-FilmlerApp.release.xcconfig"; sourceTree = "<group>"; };
 		EB45A5A96FF69ECCF50B926E /* Pods_FilmlerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmlerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +76,7 @@
 				476B26F62BAD8B8C00E5A5A2 /* Assets.xcassets */,
 				476B26F82BAD8B8C00E5A5A2 /* LaunchScreen.storyboard */,
 				476B26FB2BAD8B8C00E5A5A2 /* Info.plist */,
+				47BDE32D2BBE007800FCBF25 /* GoogleService-Info.plist */,
 				47C8236B2BBC414800D8E0EB /* FilmlerApp-Bridging-Header.h */,
 			);
 			path = FilmlerApp;
@@ -113,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				476B27062BAD8CCF00E5A5A2 /* Filmler.swift */,
-				471D35802BBCC5ED00705971 /* FilmlerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -221,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				476B26FA2BAD8B8C00E5A5A2 /* LaunchScreen.storyboard in Resources */,
+				47BDE32E2BBE007800FCBF25 /* GoogleService-Info.plist in Resources */,
 				476B26F72BAD8B8C00E5A5A2 /* Assets.xcassets in Resources */,
 				476B26F52BAD8B8900E5A5A2 /* Main.storyboard in Resources */,
 			);
@@ -280,7 +281,6 @@
 				476B279F2BB48E7000E5A5A2 /* AnasayfaViewModel.swift in Sources */,
 				476B26F02BAD8B8900E5A5A2 /* SceneDelegate.swift in Sources */,
 				476B27092BAD8D4300E5A5A2 /* DetaySayfa.swift in Sources */,
-				471D35812BBCC5ED00705971 /* FilmlerCevap.swift in Sources */,
 				476B27072BAD8CCF00E5A5A2 /* Filmler.swift in Sources */,
 				476B270B2BAD8ED400E5A5A2 /* FilmlerHucre.swift in Sources */,
 				476B279C2BB48E3D00E5A5A2 /* FilmlerDaoRepository.swift in Sources */,
